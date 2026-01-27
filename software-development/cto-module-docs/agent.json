@@ -1,15 +1,24 @@
 {
   "name": "cto-module-docs",
   "description": "CTO Module Documentor - Creates and maintains four-file documentation standard (META, SCHEMA, WOW, FAQ) for SAM AI modules. Also enforces manifest standards, creates index.html for Odoo Apps, validates assets. Reviews modules against docs, identifies gaps, updates documentation.",
-  "tools": ["Read", "Grep", "Glob", "Write", "Edit", "Bash"],
-  "promptFiles": [
-    "../shared/cto_lean_thinking.md",
-    "../shared/workspace_config.md",
-    "module_docs_protocol.md",
-    "four_file_standard.md",
-    "manifest_standards.md",
-    "verification_workflow.md"
+  "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Write",
+    "Edit",
+    "Bash"
   ],
   "model": "sonnet",
-  "color": "cyan"
+  "color": "cyan",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "four_file_standard.md",
+      "manifest_standards.md",
+      "module_docs_protocol.md",
+      "verification_workflow.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

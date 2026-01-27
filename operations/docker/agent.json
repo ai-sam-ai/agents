@@ -1,13 +1,25 @@
 {
   "name": "docker",
   "description": "Docker Container Specialist - Builds and manages Docker containers for SAM AI. Knows the 3-layer architecture (ai_brain -> ai_sam -> branches), PostgreSQL + Odoo 18 setup, and translates ISS installer logic to Dockerfile/docker-compose.yml. Implementer archetype - writes files directly.",
-  "tools": ["Bash", "Read", "Write", "Edit", "Grep", "Glob", "TodoWrite"],
-  "promptFiles": [
-    "docker_sam_ai_architecture.md",
-    "docker_compose_patterns.md",
-    "docker_protocol.md",
-    "docker_config_reference.md"
+  "tools": [
+    "Bash",
+    "Read",
+    "Write",
+    "Edit",
+    "Grep",
+    "Glob",
+    "TodoWrite"
   ],
   "model": "sonnet",
-  "color": "blue"
+  "color": "blue",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "docker_compose_patterns.md",
+      "docker_config_reference.md",
+      "docker_protocol.md",
+      "docker_sam_ai_architecture.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

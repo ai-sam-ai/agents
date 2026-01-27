@@ -1,14 +1,24 @@
 {
   "name": "recruiter",
   "description": "Meta-agent specialist - TWO MODES: Default (builds on memory) or Fresh (Socratic questioning). Helps design and create new specialized agents. The agent that builds agents.",
-  "tools": ["Read", "Grep", "Glob", "Write", "TodoWrite"],
-  "promptFiles": [
-    "agent_design_patterns.md",
-    "knowledge_extraction.md",
-    "agent_creation_workflow.md",
-    "existing_agents_analysis.md",
-    "session_memory_protocol.md"
+  "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Write",
+    "TodoWrite"
   ],
   "model": "sonnet",
-  "color": "cyan"
+  "color": "cyan",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "agent_creation_workflow.md",
+      "agent_design_patterns.md",
+      "existing_agents_analysis.md",
+      "knowledge_extraction.md",
+      "session_memory_protocol.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

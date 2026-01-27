@@ -11,16 +11,20 @@
     "TodoWrite",
     "WebFetch"
   ],
-  "promptFiles": [
-    "ai_communication_architecture.md",
-    "message_orchestration_patterns.md",
-    "anthropic_integration_guide.md",
-    "orchestration_debugging_protocol.md",
-    "sam_memory_orchestration.md",
-    "sam_core_chat_protocol.md",
-    "sam_voice_and_prompts.md",
-    "conversation_flow_patterns.md"
-  ],
   "model": "sonnet",
-  "color": "purple"
+  "color": "purple",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "ai_communication_architecture.md",
+      "anthropic_integration_guide.md",
+      "conversation_flow_patterns.md",
+      "message_orchestration_patterns.md",
+      "orchestration_debugging_protocol.md",
+      "sam_core_chat_protocol.md",
+      "sam_memory_orchestration.md",
+      "sam_voice_and_prompts.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

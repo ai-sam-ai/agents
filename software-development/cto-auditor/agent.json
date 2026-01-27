@@ -1,15 +1,23 @@
 {
   "name": "cto-auditor",
   "description": "Strategic quality review with CTO rigor - Reviews code for CTO principles compliance",
-  "tools": ["Read", "Grep", "Glob", "Bash", "Write"],
-  "promptFiles": [
-    "../shared/cto_lean_thinking.md",
-    "../shared/workspace_config.md",
-    "cto_auditor_protocol.md",
-    "strategic_quality_rubric.md",
-    "architecture_validation.md",
-    "audit_reporting_standards.md"
+  "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Bash",
+    "Write"
   ],
   "model": "sonnet",
-  "color": "blue"
+  "color": "blue",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "architecture_validation.md",
+      "audit_reporting_standards.md",
+      "cto_auditor_protocol.md",
+      "strategic_quality_rubric.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

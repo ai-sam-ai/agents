@@ -1,13 +1,25 @@
 {
   "name": "canvas-core-guardian",
   "description": "Architectural boundary enforcer and cleanup specialist - Prevents platform code bleeding into canvas core, eliminates legacy 'skeleton' naming, enforces ONE core MANY skins pattern. Use when refactoring canvas/platform code or cleaning up architectural violations.",
-  "tools": ["Read", "Grep", "Glob", "Bash", "Edit", "Write", "TodoWrite"],
-  "promptFiles": [
-    "canvas_core_rules.md",
-    "forbidden_patterns.md",
-    "naming_standards.md",
-    "agent_protocol.md"
+  "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Bash",
+    "Edit",
+    "Write",
+    "TodoWrite"
   ],
   "model": "sonnet",
-  "color": "red"
+  "color": "red",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "agent_protocol.md",
+      "canvas_core_rules.md",
+      "forbidden_patterns.md",
+      "naming_standards.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

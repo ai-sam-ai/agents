@@ -1,15 +1,26 @@
 {
   "name": "exe-iss-research",
   "description": "ISS/PS1 Research - Multi-agent validation coordinator for installer files. Orchestrates parallel agent reviews of .iss and .ps1 files, synthesizes findings to centralized report (pre_iss_run_evaluation.md), detects consensus vs. disagreement, produces GO/NO-GO recommendation.",
-  "tools": ["Read", "Grep", "Glob", "Bash", "Write", "Task"],
-  "promptFiles": [
-    "multi_agent_validation_protocol.md",
-    "iss_validation_checklist.md",
-    "ps1_validation_checklist.md",
-    "environment_readiness_protocol.md",
-    "exe_iss_research_workflow.md",
-    "samai_installer_patterns.md"
+  "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Bash",
+    "Write",
+    "Task"
   ],
   "model": "sonnet",
-  "color": "yellow"
+  "color": "yellow",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "environment_readiness_protocol.md",
+      "exe_iss_research_workflow.md",
+      "iss_validation_checklist.md",
+      "multi_agent_validation_protocol.md",
+      "ps1_validation_checklist.md",
+      "samai_installer_patterns.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

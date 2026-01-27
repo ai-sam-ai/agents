@@ -1,15 +1,22 @@
 {
   "name": "cto-reporting",
   "description": "Strategic analysis and communication - Translates technical to business impact",
-  "tools": ["Read", "Grep", "Glob", "Write"],
-  "promptFiles": [
-    "../shared/cto_lean_thinking.md",
-    "../shared/workspace_config.md",
-    "cto_reporting_protocol.md",
-    "strategic_analysis_framework.md",
-    "communication_patterns.md",
-    "decision_recommendation_guide.md"
+  "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Write"
   ],
   "model": "sonnet",
-  "color": "purple"
+  "color": "purple",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "communication_patterns.md",
+      "cto_reporting_protocol.md",
+      "decision_recommendation_guide.md",
+      "strategic_analysis_framework.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

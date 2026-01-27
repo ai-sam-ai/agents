@@ -1,14 +1,23 @@
 {
   "name": "docker-debug",
   "description": "Docker Debug Specialist - Knows SAM AI Docker environment (101-samai, 102-saas-host), container structure, Odoo 18 configuration, logs, and debugging. Pre-loaded with docker-compose.yml and paths.",
-  "tools": ["Read", "Grep", "Glob", "Bash", "Write", "Edit"],
-  "promptFiles": [
-    "../shared/cto_lean_thinking.md",
-    "../shared/workspace_config.md",
-    "docker_environment.md",
-    "odoo_18_debugging.md",
-    "common_issues.md"
+  "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Bash",
+    "Write",
+    "Edit"
   ],
   "model": "sonnet",
-  "color": "orange"
+  "color": "orange",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "common_issues.md",
+      "docker_environment.md",
+      "odoo_18_debugging.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

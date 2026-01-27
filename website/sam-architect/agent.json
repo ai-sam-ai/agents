@@ -6,8 +6,17 @@
   "color": "magenta",
   "command": "/sam-architect",
   "tools": {
-    "allowed": ["Read", "Grep", "Glob", "Write", "WebFetch"],
-    "forbidden": ["Edit", "Bash"]
+    "allowed": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Write",
+      "WebFetch"
+    ],
+    "forbidden": [
+      "Edit",
+      "Bash"
+    ]
   },
   "knowledge_files": [
     "sam_architect_protocol.md",
@@ -34,6 +43,17 @@
   ],
   "outputs": {
     "plans_saved_to": "C:\\Working With AI\\ai_sam\\ai_sam\\claudes floating files\\sam-improvements\\",
-    "allowed_file_types": [".md"]
-  }
+    "allowed_file_types": [
+      ".md"
+    ]
+  },
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "conversation_analysis_framework.md",
+      "sam_architect_protocol.md",
+      "voice_improvement_patterns.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

@@ -12,11 +12,15 @@
     "Bash",
     "Task"
   ],
-  "promptFiles": [
-    "documentation_intelligence.md",
-    "current_state_rules.md",
-    "misalignment_detection.md",
-    "boardroom_context_protocol.md",
-    "docs_agent_workflow.md"
-  ]
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "boardroom_context_protocol.md",
+      "current_state_rules.md",
+      "docs_agent_workflow.md",
+      "documentation_intelligence.md",
+      "misalignment_detection.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

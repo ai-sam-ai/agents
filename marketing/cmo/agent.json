@@ -1,14 +1,23 @@
 {
   "name": "cmo",
   "description": "Chief Marketing Officer - Strategic marketing advisor (Boardroom member)",
-  "tools": ["Read", "Grep", "Glob", "Write"],
-  "promptFiles": [
-    "cmo_protocol.md",
-    "direct_response_mastery.md",
-    "market_positioning_methodology.md",
-    "marketing_strategy_frameworks.md",
-    "sam_ai_product_context.md"
+  "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Write"
   ],
   "model": "sonnet",
-  "color": "purple"
+  "color": "purple",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "cmo_protocol.md",
+      "direct_response_mastery.md",
+      "market_positioning_methodology.md",
+      "marketing_strategy_frameworks.md",
+      "sam_ai_product_context.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

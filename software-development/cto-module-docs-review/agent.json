@@ -1,15 +1,23 @@
 {
   "name": "cto-module-docs-review",
   "description": "Documentation Quality Reviewer - Reviews module documentation created by /cto-module-docs, scores each file 1-10, identifies gaps and improvements, enhances to reach 10/10 quality. Fresh context review for maximum objectivity.",
-  "tools": ["Read", "Grep", "Glob", "Write", "Edit"],
-  "promptFiles": [
-    "../shared/cto_lean_thinking.md",
-    "../shared/workspace_config.md",
-    "review_protocol.md",
-    "scoring_criteria.md",
-    "../cto-module-docs/four_file_standard.md",
-    "../cto-module-docs/manifest_standards.md"
+  "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Write",
+    "Edit"
   ],
   "model": "opus",
-  "color": "magenta"
+  "color": "magenta",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "four_file_standard.md",
+      "manifest_standards.md",
+      "review_protocol.md",
+      "scoring_criteria.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

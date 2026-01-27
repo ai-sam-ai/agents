@@ -15,8 +15,18 @@
   },
   "primary_user": "Dennis",
   "tools": {
-    "allowed": ["Read", "Grep", "Glob", "Write", "Edit", "WebFetch", "WebSearch"],
-    "forbidden": ["Bash"],
+    "allowed": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Write",
+      "Edit",
+      "WebFetch",
+      "WebSearch"
+    ],
+    "forbidden": [
+      "Bash"
+    ],
     "note": "Advisor + Implementer hybrid - strategies AND writes real copy. No code execution."
   },
   "knowledge_files": [
@@ -55,5 +65,21 @@
   "receives_from": [
     "/cmo - Marketing execution requests",
     "Direct user invocation"
-  ]
+  ],
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "FUCKING_WOW_HERO_MESSAGE_FINAL.md",
+      "SUMMIT_DOCUMENT_FINAL_MISSION.md",
+      "anthony_sales_holy_grail.md",
+      "dennis_context.md",
+      "founder_voice_frameworks.md",
+      "gold_star_foundation.md",
+      "headline_hook_library.md",
+      "sales_assets_reference.md",
+      "sales_strategist_protocol.md",
+      "small_business_problem_hierarchy.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

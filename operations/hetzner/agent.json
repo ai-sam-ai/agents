@@ -7,7 +7,16 @@
   "created": "2026-01-05",
   "updated": "2026-01-05",
   "tools": {
-    "allowed": ["Read", "Grep", "Glob", "Bash", "Write", "Edit", "WebFetch", "WebSearch"],
+    "allowed": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash",
+      "Write",
+      "Edit",
+      "WebFetch",
+      "WebSearch"
+    ],
     "note": "Full Implementer - can execute commands and persist session context"
   },
   "knowledge_files": [
@@ -32,5 +41,15 @@
   ],
   "receives_from": [
     "/cto - Infrastructure execution requests"
-  ]
+  ],
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "hetzner_cloud_fundamentals.md",
+      "hetzner_implementer_protocol.md",
+      "hetzner_session_context.md",
+      "ssh_security_mastery.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

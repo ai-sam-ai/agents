@@ -1,14 +1,25 @@
 {
   "name": "workflows-rescue",
   "description": "Workflows Rescue Mission - Deep system mapping with breakpoint identification to prevent debug hell after 93% code reduction",
-  "tools": ["Read", "Grep", "Glob", "Write", "TodoWrite", "Bash"],
-  "promptFiles": [
-    "rescue_mission_protocol.md",
-    "three_layer_architecture.md",
-    "functionality_inventory_guide.md",
-    "breakpoint_analysis_methodology.md",
-    "html_bible_structure.md"
+  "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Write",
+    "TodoWrite",
+    "Bash"
   ],
   "model": "sonnet",
-  "color": "red"
+  "color": "red",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "breakpoint_analysis_methodology.md",
+      "functionality_inventory_guide.md",
+      "html_bible_structure.md",
+      "rescue_mission_protocol.md",
+      "three_layer_architecture.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

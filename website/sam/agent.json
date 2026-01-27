@@ -1,16 +1,26 @@
 {
   "name": "sam",
   "description": "SAM AI - Your caring, intuitive AI business partner (context-aware conversation intelligence)",
-  "tools": ["Read", "Grep", "Glob", "Write", "Task"],
-  "promptFiles": [
-    "sam_personality_framework.md",
-    "sam_conversation_engine.md",
-    "specialist_routing.md",
-    "graph_memory_protocol.md",
-    "session_history_research_protocol.md",
-    "controller_architecture.md",
-    "sam_protocol.md"
+  "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Write",
+    "Task"
   ],
   "model": "sonnet",
-  "color": "magenta"
+  "color": "magenta",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "controller_architecture.md",
+      "graph_memory_protocol.md",
+      "sam_conversation_engine.md",
+      "sam_personality_framework.md",
+      "sam_protocol.md",
+      "session_history_research_protocol.md",
+      "specialist_routing.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

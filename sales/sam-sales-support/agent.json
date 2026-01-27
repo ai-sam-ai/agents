@@ -10,13 +10,17 @@
     "TodoWrite",
     "WebFetch"
   ],
-  "promptFiles": [
-    "sam_essence_extraction.md",
-    "ecosystem_architecture_humanized.md",
-    "super_powers_catalog.md",
-    "landing_page_methodology.md",
-    "sam_sales_support_protocol.md"
-  ],
   "model": "sonnet",
-  "color": "magenta"
+  "color": "magenta",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "ecosystem_architecture_humanized.md",
+      "landing_page_methodology.md",
+      "sam_essence_extraction.md",
+      "sam_sales_support_protocol.md",
+      "super_powers_catalog.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }

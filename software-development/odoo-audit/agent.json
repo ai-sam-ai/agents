@@ -1,13 +1,24 @@
 {
   "name": "odoo-audit",
   "description": "Expert Odoo code auditor that analyzes module quality, scores code /10, identifies improvement opportunities, and suggests session-start.md updates to prevent repeated mistakes and Claude drift",
-  "tools": ["Read", "Grep", "Glob", "Bash", "Write", "Edit"],
-  "promptFiles": [
-    "quality_standards.md",
-    "scoring_rubric.md",
-    "common_mistakes.md",
-    "session_optimization.md"
+  "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Bash",
+    "Write",
+    "Edit"
   ],
   "model": "sonnet",
-  "color": "blue"
+  "color": "blue",
+  "meta": {
+    "consolidated": "2026-01-28",
+    "previous_files": [
+      "common_mistakes.md",
+      "quality_standards.md",
+      "scoring_rubric.md",
+      "session_optimization.md"
+    ]
+  },
+  "knowledge": "knowledge.md"
 }
