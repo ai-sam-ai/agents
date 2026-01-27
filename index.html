@@ -3,68 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAM AI Agents</title>
+  <title>SAM AI Agents Registry</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
-    h1 { color: #333; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; max-width: 1000px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #333; }
+    h1 { color: #333; border-bottom: 2px solid #667eea; padding-bottom: 0.5rem; }
     h2 { color: #555; margin-top: 2rem; }
-    pre { background: #f5f5f5; padding: 1rem; overflow-x: auto; border-radius: 4px; }
-    code { background: #f5f5f5; padding: 0.2rem 0.4rem; border-radius: 3px; }
+    h3 { color: #667eea; margin-top: 1.5rem; }
     a { color: #0066cc; }
-    .endpoint { background: #e8f4e8; padding: 0.5rem 1rem; border-radius: 4px; margin: 0.5rem 0; }
-    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
-    th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; }
-    th { background: #f5f5f5; }
-    .badge { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 3px; font-size: 0.8rem; }
+    .endpoint { background: #e8f4e8; padding: 0.5rem 1rem; border-radius: 4px; margin: 0.5rem 0; display: inline-block; margin-right: 1rem; }
+    .segment { background: #f8f9fa; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .segment h3 { margin-top: 0; }
+    .agent-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.5rem; }
+    .agent { background: white; border: 1px solid #ddd; border-radius: 4px; padding: 0.5rem 1rem; }
+    .agent a { text-decoration: none; }
+    .agent:hover { border-color: #667eea; }
+    .badge { display: inline-block; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.75rem; margin-left: 0.5rem; }
     .active { background: #d4edda; color: #155724; }
     .planned { background: #fff3cd; color: #856404; }
+    .customer { background: #cce5ff; color: #004085; }
+    .stats { display: flex; gap: 2rem; margin: 1rem 0; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 2rem; font-weight: bold; color: #667eea; }
+    pre { background: #f5f5f5; padding: 1rem; overflow-x: auto; border-radius: 4px; font-size: 0.9rem; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ddd; color: #666; font-size: 0.9rem; }
   </style>
 </head>
 <body>
-  <h1>SAM AI Agent Definitions</h1>
-  <p>Agent configuration endpoint for the SAM AI ecosystem.</p>
+  <h1>SAM AI Agents Registry</h1>
+  <p>40+ specialized AI agents organized by business segment.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num">40+</div>Agents</div>
+    <div class="stat"><div class="stat-num">9</div>Segments</div>
+    <div class="stat"><div class="stat-num">4</div>Customer-Facing</div>
+  </div>
 
   <h2>Endpoints</h2>
   <div class="endpoint"><strong>Registry:</strong> <a href="index.json">index.json</a></div>
   <div class="endpoint"><strong>For AI:</strong> <a href="llms.txt">llms.txt</a></div>
 
-  <h2>Available Agents</h2>
-  <table>
-    <tr>
-      <th>Agent</th>
-      <th>Status</th>
-      <th>Config</th>
-    </tr>
-    <tr>
-      <td>💰 Sales Agent</td>
-      <td><span class="badge active">active</span></td>
-      <td><a href="sales-agent/agent.json">agent.json</a></td>
-    </tr>
-    <tr>
-      <td>🛟 Support Agent</td>
-      <td><span class="badge planned">planned</span></td>
-      <td><a href="support-agent/agent.json">agent.json</a></td>
-    </tr>
-    <tr>
-      <td>🚀 Onboarding Agent</td>
-      <td><span class="badge planned">planned</span></td>
-      <td><a href="onboarding-agent/agent.json">agent.json</a></td>
-    </tr>
-  </table>
+  <h2>Agents by Segment</h2>
+
+  <div class="segment">
+    <h3>💰 Sales</h3>
+    <div class="agent-grid">
+      <div class="agent"><a href="sales/sales-agent/agent.json">sales-agent</a><span class="badge active">active</span><span class="badge customer">customer</span></div>
+      <div class="agent"><a href="sales/sales-strategist/agent.json">sales-strategist</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="sales/sam-sales-support/agent.json">sam-sales-support</a><span class="badge active">active</span></div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <h3>📢 Marketing</h3>
+    <div class="agent-grid">
+      <div class="agent"><a href="marketing/cmo/agent.json">cmo</a><span class="badge active">active</span></div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <h3>⚙️ Operations</h3>
+    <div class="agent-grid">
+      <div class="agent"><a href="operations/docker/agent.json">docker</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="operations/docker-debug/agent.json">docker-debug</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="operations/hetzner/agent.json">hetzner</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="operations/n8n-expert/agent.json">n8n-expert</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="operations/workflows-rescue/agent.json">workflows-rescue</a><span class="badge active">active</span></div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <h3>💻 Software Development</h3>
+    <div class="agent-grid">
+      <div class="agent"><a href="software-development/cto/agent.json">cto</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/cto-architect/agent.json">cto-architect</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/cto-developer/agent.json">cto-developer</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/cto-auditor/agent.json">cto-auditor</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/cto-dataflow/agent.json">cto-dataflow</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/cto-dataflow-review/agent.json">cto-dataflow-review</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/cto-module-docs/agent.json">cto-module-docs</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/cto-module-docs-review/agent.json">cto-module-docs-review</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/cto-reporting/agent.json">cto-reporting</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/github/agent.json">github</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/canvas-core-guardian/agent.json">canvas-core-guardian</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/odoo-audit/agent.json">odoo-audit</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/odoo-qa-guardian/agent.json">odoo-qa-guardian</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/exe-build/agent.json">exe-build</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/mod-intelligence/agent.json">mod-intelligence</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/mod-sam/agent.json">mod-sam</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="software-development/mod-scrapper/agent.json">mod-scrapper</a><span class="badge active">active</span></div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <h3>🌐 Website</h3>
+    <div class="agent-grid">
+      <div class="agent"><a href="website/sam/agent.json">sam</a><span class="badge active">active</span><span class="badge customer">customer</span></div>
+      <div class="agent"><a href="website/sam-architect/agent.json">sam-architect</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="website/sam-chat/agent.json">sam-chat</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="website/sam-core-chat/agent.json">sam-core-chat</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="website/sam-workflow/agent.json">sam-workflow</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="website/sam-workflow-base/agent.json">sam-workflow-base</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="website/doc-sprint/agent.json">doc-sprint</a><span class="badge active">active</span></div>
+      <div class="agent"><a href="website/documentation-master/agent.json">documentation-master</a><span class="badge active">active</span></div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <h3>👥 Human Resources</h3>
+    <div class="agent-grid">
+      <div class="agent"><a href="human-resources/recruiter/agent.json">recruiter</a><span class="badge active">active</span></div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <h3>🛟 Support</h3>
+    <div class="agent-grid">
+      <div class="agent"><a href="support/support-agent/agent.json">support-agent</a><span class="badge planned">planned</span><span class="badge customer">customer</span></div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <h3>🤝 Accounts</h3>
+    <div class="agent-grid">
+      <div class="agent"><a href="accounts/onboarding-agent/agent.json">onboarding-agent</a><span class="badge planned">planned</span><span class="badge customer">customer</span></div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <h3>🔬 Research</h3>
+    <div class="agent-grid">
+      <div class="agent"><a href="research/exe-iss-research/agent.json">exe-iss-research</a><span class="badge active">active</span></div>
+    </div>
+  </div>
 
   <h2>Usage</h2>
   <pre>// Fetch agent registry
 fetch('https://ai-sam-ai.github.io/agents/index.json')
   .then(r => r.json())
   .then(registry => {
-    const activeAgents = registry.agents.filter(a => a.status === 'active');
-    console.log(activeAgents);
+    // Filter by segment
+    const devAgents = registry.agents.filter(a => a.segment === 'software-development');
+
+    // Or find customer-facing agents
+    const publicAgents = registry.agents.filter(a => a.customer_facing);
+
+    console.log(devAgents);
   });</pre>
 
-  <h2>For AI Assistants</h2>
-  <p>See <a href="llms.txt">llms.txt</a> for structured documentation on how to navigate and use this registry.</p>
-
-  <hr>
-  <p><small>Auto-synced from <a href="https://github.com/ai-sam-ai/30_samai_saas_host_management">samai_agents module</a></small></p>
+  <footer>
+    <p><a href="https://github.com/ai-sam-ai/agents">GitHub Repository</a> | <a href="https://sme.ec/documentation">Documentation</a></p>
+  </footer>
 </body>
 </html>
