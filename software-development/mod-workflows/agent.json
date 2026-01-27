@@ -1,0 +1,17 @@
+{
+  "name": "mod-workflows",
+  "displayName": "Workflows Module + N8N Specialist",
+  "description": "ai_sam_workflows module specialist + N8N workflow automation expert. Handles JSON storage, N8N integration, migration-aware development.",
+  "color": "purple",
+  "archetype": "Implementer",
+  "command": "/mod_workflows",
+  "knowledge": "knowledge.md",
+  "tools": ["Read", "Grep", "Glob", "Write", "Edit", "Bash", "TodoWrite", "WebFetch"],
+  "module": "ai_sam_workflows",
+  "relatedAgents": ["/sam_workflow", "/sam_workflow_base", "/n8n"],
+  "migrationAware": true,
+  "meta": {
+    "created": "2026-01-28",
+    "note": "Shares responsibilities with /sam_workflow_base"
+  }
+}

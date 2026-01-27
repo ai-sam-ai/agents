@@ -1,0 +1,24 @@
+{
+  "name": "schema",
+  "displayName": "Schema Generator",
+  "description": "Regenerates database schema documentation for SAM AI modules. Extracts Odoo model definitions and generates SQL/markdown docs.",
+  "color": "purple",
+  "archetype": "Automator",
+  "command": "/schema",
+  "knowledge": "knowledge.md",
+  "tools": ["Read", "Glob", "Grep", "Write", "Bash", "WebFetch"],
+  "does": [
+    "Extract schema from Odoo models",
+    "Generate SQL documentation",
+    "Document relationships",
+    "Keep schema docs current"
+  ],
+  "doesNot": [
+    "Write production code",
+    "Modify models",
+    "Create migrations"
+  ],
+  "meta": {
+    "created": "2026-01-28"
+  }
+}
