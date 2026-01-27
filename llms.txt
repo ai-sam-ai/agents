@@ -1,114 +1,121 @@
 # SAM AI Agents Registry
 
-> Structured agent definitions for the SAM AI ecosystem.
-> This file helps AI assistants navigate and utilize the agent registry.
+> 40+ specialized AI agents organized by business segment.
+> This file helps AI assistants navigate and utilize the agent ecosystem.
 
 ## Quick Start
 
 **Registry endpoint:** https://ai-sam-ai.github.io/agents/index.json
 
-Fetch the registry to discover available agents, then load specific agent configs as needed.
+Fetch the registry to discover agents organized by business segment.
 
-## Registry Schema (index.json)
+## Registry Schema (index.json v2.0)
 
-```
+```json
 {
-  "version": "x.x.x",
-  "updated": "YYYY-MM-DD",
-  "base_url": "https://ai-sam-ai.github.io/agents",
-  "agents": [...]
+  "version": "2.0.0",
+  "segments": [...],    // Business segments
+  "agents": [...]       // All agents with segment field
 }
 ```
 
-**Agent listing fields:**
-| Field | Purpose |
+**Segments:**
+| Segment | Icon | Purpose |
+|---------|------|---------|
+| sales | 💰 | Revenue generation agents |
+| marketing | 📢 | Attract and engage agents |
+| accounts | 🤝 | Client relationship agents |
+| operations | ⚙️ | Infrastructure and automation |
+| software-development | 💻 | Build and ship agents |
+| support | 🛟 | Customer success agents |
+| human-resources | 👥 | People and recruitment |
+| website | 🌐 | Digital presence and SAM core |
+| research | 🔬 | Experimental agents |
+
+## Agent Paths
+
+Agents are organized by segment:
+```
+/{segment}/{agent-id}/agent.json
+```
+
+Examples:
+- `/sales/sales-agent/agent.json`
+- `/software-development/cto/agent.json`
+- `/operations/docker/agent.json`
+- `/website/sam/agent.json`
+
+## Key Agents by Segment
+
+### Sales (💰)
+| Agent | Purpose |
 |-------|---------|
-| `id` | Unique identifier (use for lookups) |
-| `name` | Display name |
-| `description` | What this agent does |
-| `icon` | Emoji representation |
-| `status` | "active" or "planned" |
-| `path` | Folder containing full config |
-| `use_cases` | Where this agent is deployed |
-| `triggers` | Keywords that activate this agent |
+| sales-agent | Landing page sales conversations (customer-facing) |
+| sales-strategist | Funnels, courses, direct response copy |
+| sam-sales-support | Landing page creation |
 
-## Loading an Agent
+### Software Development (💻)
+| Agent | Purpose |
+|-------|---------|
+| cto | Infrastructure strategy advisor |
+| cto-architect | Technical planning with CTO rigor |
+| cto-developer | Strategic coding and fixes |
+| cto-auditor | Quality review and compliance |
+| github | Git/GitHub workflow consultant |
+| odoo-qa-guardian | Pre-commit quality gate |
 
-1. Fetch registry: `GET /index.json`
-2. Find agent by `id` or match `triggers` to user input
-3. Fetch full config: `GET /{path}/agent.json`
-4. Load knowledge files listed in `knowledge_files[]`
+### Operations (⚙️)
+| Agent | Purpose |
+|-------|---------|
+| docker | Container management |
+| docker-debug | Docker troubleshooting |
+| hetzner | Infrastructure management |
+| n8n-expert | Workflow automation |
+| workflows-rescue | Debug prevention mapping |
 
-**Example flow:**
+### Website (🌐)
+| Agent | Purpose |
+|-------|---------|
+| sam | Core SAM AI personality (customer-facing) |
+| sam-core-chat | Voice + behavior + orchestration |
+| documentation-master | Ecosystem documentation |
+
+## Loading Pattern
+
+1. Fetch `/index.json` for registry
+2. Filter by `segment` or match `triggers`
+3. Check `customer_facing` for deployment context
+4. Fetch `/{path}/agent.json` for full config
+5. Load knowledge files as needed
+
+## Agent Config Structure
+
 ```
-User says: "How much does this cost?"
-  → Match trigger: "how much" → sales-agent
-  → Fetch: /sales-agent/agent.json
-  → Load knowledge files for pricing context
+{segment}/{agent-id}/
+├── agent.json           # Full configuration
+├── {protocol}.md        # Agent-specific protocol
+└── *.md                 # Knowledge files
 ```
-
-## Agent Configuration Schema (agent.json)
-
-Each agent folder contains:
-
-```
-{agent-id}/
-├── agent.json      # Full configuration
-├── README.md       # Human documentation
-└── knowledge/      # Domain expertise files
-    ├── topic1.md
-    └── topic2.md
-```
-
-**agent.json structure:**
-| Section | Purpose |
-|---------|---------|
-| `persona` | Name, greeting, personality, voice |
-| `knowledge_files` | Paths to load for context |
-| `behavior` | Conversation flow, discovery questions, closing signals |
-| `escalation` | When and how to hand off to humans |
-| `guardrails` | What to never/always do, topics to avoid |
-| `cta_options` | Calls-to-action by intent level |
-| `tools` | Allowed and forbidden capabilities |
 
 ## Shared Resources
 
-All agents inherit from:
-- `shared/brand_voice.md` - Tone and communication style
-- `shared/company_info.md` - Company facts and context
-- `shared/escalation_rules.md` - Human handoff protocols
+All agents can access:
+- `shared/brand_voice.md` - Communication style
+- `shared/company_info.md` - Company context
+- `shared/escalation_rules.md` - Human handoff rules
+- `shared/cto_lean_thinking.md` - Technical principles
+- `shared/workspace_config.md` - Environment setup
 
-## Navigation Guide for AI
+## Customer-Facing vs Internal
 
-**Finding the right agent:**
-1. Check `triggers[]` for keyword matches
-2. Check `use_cases[]` for deployment context
-3. Check `status` - only use "active" agents in production
+```json
+"customer_facing": true   // Deployed on public interfaces
+"customer_facing": false  // Internal/development tools
+```
 
-**Loading efficiently:**
-- Start with registry, don't fetch all agent configs
-- Load knowledge files on-demand based on conversation topic
-- Cache configs - they change infrequently
-
-**When to escalate:**
-- Check `escalation.triggers[]` in agent config
-- Use `escalation.message` template for handoff
-- Route to `escalation.contact`
-
-## Current Agents
-
-| ID | Status | Purpose |
-|----|--------|---------|
-| sales-agent | active | Landing page sales conversations |
-| support-agent | planned | Client support and troubleshooting |
-| onboarding-agent | planned | New client setup guidance |
-
-## Updates
-
-This registry is auto-synced from the SAM AI development repository.
-Check `updated` field in index.json for last modification date.
+**Customer-facing agents:** sales-agent, sam, support-agent, onboarding-agent
 
 ---
 
-Source: https://github.com/ai-sam-ai/30_samai_saas_host_management
+Source: https://github.com/ai-sam-ai/agents
 Documentation: https://sme.ec/documentation
