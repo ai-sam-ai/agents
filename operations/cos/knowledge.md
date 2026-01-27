@@ -137,7 +137,7 @@ IF doesn't fit archetype -> STOP -> Re-evaluate
 ```
 - Start with 3 knowledge files (<750 lines total)
 - No premature optimization
-- Build for current pain, not future scale
+- Build for current pain with patterns that scale to 1000+ clients
 
 IF planning 5+ files -> STOP -> Over-engineering
 ```

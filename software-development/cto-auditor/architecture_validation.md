@@ -188,29 +188,31 @@ access_ai_conversation_manager,ai.conversation.manager,model_ai_conversation,bas
 
 ---
 
-## Scalability Validation (Principle 3: Build for 10x)
+## Scalability Validation (Principle 3: Build for Known Scale)
 
-### Question: Does this scale to 10x?
+### Question: Will this require painful rewrite at 1000+ clients?
 
-**Current Scale Assessment:**
+**Scale Assessment:**
 ```markdown
-Current: [X users, Y records, Z requests/sec]
-Built for: [10X users, 10Y records, 10Z requests/sec]
+Target: 1000+ clients (known destination)
+Question: Does this foundation scale without rewrites?
 
 Validated:
+- [ ] Multi-tenant ready from day one
 - [ ] Database queries have indexes
 - [ ] No N+1 query patterns
 - [ ] Pagination implemented (if list views)
-- [ ] Caching considered (if needed)
-- [ ] No performance bottlenecks introduced
+- [ ] Environment-driven configs (not hardcoded)
+- [ ] Isolation boundaries don't leak between clients
 ```
 
 **Red Flags:**
-- ❌ Built for 100x (over-engineered)
+- ❌ Temporary hack that will cause heartache at scale
+- ❌ Single-tenant patterns where multi-tenant needed
+- ❌ Hardcoded configs that won't scale
 - ❌ No indexes on queried fields
 - ❌ N+1 queries
 - ❌ No pagination on large datasets
-- ❌ Complex computation on every request
 
 **Score Impact:** -1 to -2 points (scalability concern)
 
@@ -410,11 +412,12 @@ Need to create...?
 - [ ] Version format 18.0.x.y?
 - [ ] Naming conventions followed?
 
-### Scalability (10x Rule)
+### Scalability (Known Scale Rule)
 - [ ] Queries have indexes?
 - [ ] No N+1 patterns?
 - [ ] Pagination where needed?
-- [ ] Built for current + 10x?
+- [ ] Foundations work at 1000+ clients?
+- [ ] No painful rewrites needed at scale?
 
 ### Integration
 - [ ] Uses existing patterns?

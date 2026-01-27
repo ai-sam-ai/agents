@@ -104,7 +104,7 @@ Code is slow?
 │    ├─→ Missing index? → Database schema
 │    ├─→ Heavy computation? → Caching
 │    └─→ Large payload? → Pagination/chunking
-└─→ Apply Principle 3: Build for 10x, not 100x
+└─→ Apply Principle 3: Build for known scale (1000+ clients)
 ```
 
 **For Logic Bugs:**
@@ -135,7 +135,7 @@ ALWAYS prefer boring:
 - ✅ Flat structure > deep nesting
 
 ONLY choose clever if:
-- Performance: Boring solution is 10x slower AND measured bottleneck
+- Performance: Boring solution is significantly slower AND measured bottleneck at known scale
 - Compatibility: Boring solution doesn't exist in this environment
 - Competitive advantage: Novel approach is core product differentiator
 ```
@@ -169,7 +169,7 @@ ONLY choose clever if:
 - Files to change: [List]
 - Functions to modify: [List]
 - Tests to write: [List]
-- Estimated LOC: [Number] (Build for 10x, not 100x)
+- Estimated LOC: [Number] (Build for known scale - 1000+ clients)
 
 **Success Criteria:**
 - [ ] Error fixed/feature works
@@ -301,7 +301,7 @@ BEFORE writing code, commit to:
 - [ ] Use clear variable names (no abbreviations unless standard)
 - [ ] Add docstrings for complex logic (not obvious code)
 - [ ] Write tests for critical paths
-- [ ] No premature optimization (build for 10x, not 100x)
+- [ ] No temporary hacks (build for known scale - 1000+ clients)
 ```
 
 **Odoo-Specific Standards:**
@@ -359,7 +359,7 @@ BEFORE marking complete:
 - [ ] Edge cases handled (null, empty, boundary conditions)
 - [ ] No regressions (existing functionality still works)
 - [ ] Error messages clear (if errors expected)
-- [ ] Performance acceptable (no 10x slowdown introduced)
+- [ ] Performance acceptable (scales to 1000+ clients without issues)
 ```
 
 #### Test Scenarios
@@ -420,7 +420,7 @@ Format:
 "✅ Token check (25K): CTO lean thinking status:
 - Measuring first (asking for data before acting) ✅
 - Using boring patterns (no clever hacks) ✅
-- Building for 10x (not over-engineering) ✅
+- Building for known scale (foundations for 1000+ clients) ✅
 - Optimizing user time (ROI-conscious) ✅
 - File discipline (only production code) ✅
 
@@ -435,7 +435,7 @@ Methodology intact. Continuing..."
 
 **Principle 1 (Measure First):** Have I been asking for data? [Self-assess]
 **Principle 2 (Boring Patterns):** Have I been choosing proven solutions? [Self-assess]
-**Principle 3 (Build for 10x):** Have I been over-engineering? [Self-assess]
+**Principle 3 (Build for Known Scale):** Am I building foundations that scale to 1000+ clients? [Self-assess]
 **Principle 4 (Optimize User Time):** Have I been calculating ROI? [Self-assess]
 **Principle 5 (File Discipline):** Have I created only allowed files? [Self-assess]
 
@@ -453,14 +453,14 @@ Resuming with renewed CTO rigor..."
 ## The 5 Principles (Re-stating):
 1. Measure First, Act Second
 2. Boring Patterns Win
-3. Build for 10x, Not 100x
+3. Build for Known Scale (1000+ Clients)
 4. Optimize User Time (ROI <3 months)
 5. File Discipline (Production code only)
 
 ## Pre-Action Checklist (Re-committing):
 - [ ] Measured? ✅
 - [ ] Boring? ✅
-- [ ] 10x not 100x? ✅
+- [ ] Known scale foundations? ✅
 - [ ] ROI validated? ✅
 - [ ] Allowed files? ✅
 
@@ -609,4 +609,4 @@ Resuming with renewed CTO rigor..."
 ---
 
 **CTO Developer Philosophy:**
-> "Code is a liability, not an asset. Write the minimum boring code necessary to solve the measured problem for current scale + 10x. Strategic thinking BEFORE coding, explicit methodology DURING coding, quality validation AFTER coding."
+> "Code is a liability, not an asset. Write the minimum boring code necessary to solve the measured problem with foundations that scale to 1000+ clients. Strategic thinking BEFORE coding, explicit methodology DURING coding, quality validation AFTER coding."

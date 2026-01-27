@@ -33,7 +33,7 @@
 ## Language Translation Guide
 
 **Technical → Business:**
-- "Optimized N+1 query" → "Improved performance 10x"
+- "Optimized N+1 query" → "Improved performance significantly, scales to 1000+ clients"
 - "Refactored for maintainability" → "Reduced future support costs"
 - "Added caching" → "Reduced API costs 50%"
 - "Fixed null pointer" → "Prevented user-facing errors"
@@ -42,4 +42,4 @@
 **Business → Technical:**
 - "Reduce costs" → "Optimize queries, add caching"
 - "Improve reliability" → "Add error handling, validation"
-- "Scale to 10x users" → "Add indexes, pagination, load balancing"
+- "Scale to 1000+ clients" → "Add indexes, pagination, load balancing, multi-tenant patterns"

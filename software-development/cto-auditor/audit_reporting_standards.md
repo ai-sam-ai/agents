@@ -57,9 +57,9 @@
 - **Evidence:** [Which boring pattern, precedent cited]
 - **Impact:** [Score deduction if violated]
 
-### ✅ Principle 3: Build for 10x, Not 100x
+### ✅ Principle 3: Build for Known Scale (1000+ Clients)
 - **Status:** Pass / Concern / Violation
-- **Evidence:** [Current scale vs built scale]
+- **Evidence:** [Will foundations scale without rewrites?]
 - **Impact:** [Score deduction if violated]
 
 ### ✅ Principle 4: Optimize User Time
@@ -140,10 +140,9 @@
 - **View tags:** [✅ Uses `<list>` / ❌ Uses deprecated `<tree>`]
 - **Version format:** [✅ 18.0.x.y / ❌ Incorrect]
 
-### Scalability (10x Rule)
-- **Current scale:** [X users, Y records]
-- **Built for:** [10X users, 10Y records]
-- **Assessment:** [✅ Right-sized / ⚠️ Slightly over / ❌ Massive over-engineering]
+### Scalability (Known Scale Rule)
+- **Target:** 1000+ clients
+- **Assessment:** [✅ Foundations scale without rewrites / ⚠️ Minor technical debt / ❌ Temporary hack that will cause heartache]
 
 **Architectural Score:** [X/10]
 **Deductions:** [List specific violations]
@@ -204,7 +203,7 @@
 **CTO Principle Violations:**
 - Principle 1 (Measure First): [-X points] [Reason]
 - Principle 2 (Boring Patterns): [-X points] [Reason]
-- Principle 3 (Build for 10x): [-X points] [Reason]
+- Principle 3 (Build for Known Scale): [-X points] [Reason]
 - Principle 4 (Optimize Time): [-X points] [Reason]
 - Principle 5 (File Discipline): [-X points] [Reason]
 
@@ -327,7 +326,7 @@
 
 Strategic context:
 - Works correctly for current scale (100 orders/day)
-- Minor N+1 query will impact 10x scale (1,000 orders/day)
+- Minor N+1 query will cause heartache at 1000+ clients
 - Technical debt acceptable short-term
 
 Recommendation: Commit now. Create ticket for optimization at 500 orders/day threshold. ROI of optimization: 2 hours work saves 5 seconds per order at scale."
@@ -358,9 +357,9 @@ Specific issues:
 
 2. **File:** order_model.py:120
    - **Issue:** N+1 query (partner accessed in loop)
-   - **Impact:** 1,000 orders = 1,000 queries (10x scale problem)
+   - **Impact:** 1,000 orders = 1,000 queries (known scale problem)
    - **Fix:** Prefetch: `orders.mapped('partner_id')` before loop
-   - **Why:** Principle 3 - not built for 10x scale
+   - **Why:** Principle 3 - not built for known scale (1000+ clients)
 
 Please revise and resubmit."
 ```
@@ -433,7 +432,7 @@ Added null check for payment.partner_id to prevent NoneType errors. Boring patte
 ✅ All 5 principles validated:
 - Measure First: Bug reported with stack trace
 - Boring Pattern: Standard null checking
-- Build for 10x: Right-sized fix
+- Build for known scale: Right-sized fix
 - Optimize Time: Bug fix (high ROI)
 - File Discipline: Modified existing file only
 
@@ -465,7 +464,7 @@ Implemented quota tracking for API usage limits. Works correctly, minor N+1 quer
 ## CTO Principles Validation
 ✅ Principle 1: Measured (API cost problem validated)
 ✅ Principle 2: Boring pattern (Odoo computed field)
-⚠️ Principle 3: Minor concern (N+1 at 10x scale) [-1 point]
+⚠️ Principle 3: Minor concern (N+1 at 1000+ clients) [-1 point]
 ✅ Principle 4: Good ROI (prevents API cost overruns)
 ✅ Principle 5: Production code only
 
@@ -510,7 +509,7 @@ Attempted to build comprehensive analytics with ML predictions. Massive over-eng
 ## CTO Principles Validation
 ❌ Principle 1: No measurement (why ML needed?) [-3 points]
 ❌ Principle 2: Custom ML vs simple analytics [-3 points]
-❌ Principle 3: Built for 1000x scale (Redis cluster for 100 users) [-2 points]
+❌ Principle 3: Temporary hack that will require painful rewrite at 1000+ clients [-2 points]
 ⚠️ Principle 4: Unclear ROI (no justification) [-1 point]
 ✅ Principle 5: Production code only
 
@@ -531,7 +530,7 @@ Must redo:
 1. Use Odoo QWeb reports (boring pattern)
 2. Use Odoo ORM (not raw SQL)
 3. Simple statistics (not ML)
-4. Build for current + 10x (not 1000x)
+4. Build for known scale (1000+ clients, foundations that don't require rewrites)
 
 Resubmit after complete revision with CTO rigor.
 ```

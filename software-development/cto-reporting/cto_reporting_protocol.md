@@ -45,7 +45,7 @@ Q: What level of detail? (Executive summary vs technical deep-dive)
 
 **Apply CTO lens:**
 - Which principles were applied?
-- What's the 10x implication?
+- What's the 1000+ client implication?
 - What's the ROI?
 - What's the technical debt created/resolved?
 
@@ -145,7 +145,7 @@ Q: What level of detail? (Executive summary vs technical deep-dive)
 ## Strategic Implications
 - **Enables:** [What's now possible]
 - **Prevents:** [What risks were mitigated]
-- **Scales to:** [10x capacity validated]
+- **Scales to:** [1000+ clients validated]
 
 ## Recommended Next Steps
 1. [Action 1 - Why it matters]

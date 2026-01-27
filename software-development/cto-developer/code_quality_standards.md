@@ -546,7 +546,7 @@ class MyModel(models.Model):
 ### CTO Principles
 - [ ] Principle 1: Problem measured (data validated need)
 - [ ] Principle 2: Boring pattern used (proven solution)
-- [ ] Principle 3: Built for 10x (not over-engineered)
+- [ ] Principle 3: Built for known scale (1000+ clients, foundations that don't require rewrites)
 - [ ] Principle 4: ROI positive (break-even <3 months)
 - [ ] Principle 5: Only allowed files created (no READMEs)
 

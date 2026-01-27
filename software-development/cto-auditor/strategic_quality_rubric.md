@@ -76,7 +76,7 @@ def _check_positive_total(self):
 **Why 10/10:**
 - Principle 1: Problem measured (N+1 query identified, performance tested)
 - Principle 2: Boring pattern (Odoo @api.depends standard, millions of uses)
-- Principle 3: Right-sized (solves current + 10x scale, not over-engineered)
+- Principle 3: Right-sized (foundations scale to 1000+ clients without rewrites)
 - Principle 4: High ROI (prevents bugs, optimizes performance)
 - Principle 5: Production code only (no README created)
 - Tests: Comprehensive (constraint tested, performance validated)
@@ -251,7 +251,7 @@ def login(username, password):
 - Reinventing wheel: -2 points
 - Example: Custom parser when configparser exists
 
-**Principle 3: Build for 10x, Not 100x**
+**Principle 3: Build for Known Scale (1000+ Clients)**
 - Massive over-engineering: -2 points
 - Moderate over-engineering: -1 point
 - Example: Kubernetes for 100 users
@@ -332,7 +332,7 @@ class SaleOrder(models.Model):
 **Principle Validation:**
 - Principle 1 (Measure): ✅ Solving real problem (order confirmation flow)
 - Principle 2 (Boring): ✅ Odoo inheritance pattern (standard)
-- Principle 3 (10x): ✅ Right-sized (not over-engineered)
+- Principle 3 (Known Scale): ✅ Right-sized (foundations for 1000+ clients)
 - Principle 4 (ROI): ✅ Core business logic (high value)
 - Principle 5 (Files): ✅ Production code only
 
@@ -386,7 +386,7 @@ def generate_advanced_analytics_report_with_ai_predictions(self, start_date, end
 **Principle Validation:**
 - Principle 1 (Measure): ❌ No evidence this complexity is needed (-3 points)
 - Principle 2 (Boring): ❌ Custom ML model vs simpler analytics (-2 points)
-- Principle 3 (10x): ❌ MASSIVE over-engineering (Redis cluster for...what scale?) (-2 points)
+- Principle 3 (Known Scale): ❌ Temporary hack that will cause heartache at 1000+ clients (-2 points)
 - Principle 4 (ROI): ⚠️ Unclear ROI (how much time does this save?)
 - Principle 5 (Files): ✅ Production code
 
@@ -401,13 +401,13 @@ def generate_advanced_analytics_report_with_ai_predictions(self, start_date, end
 "REDO with CTO rigor. Violations:
 1. Principle 1: Measure FIRST - What problem are we solving? How complex does this need to be?
 2. Principle 2: Boring pattern - Use Odoo's report system, not custom ML
-3. Principle 3: Building for 1000x scale (Redis cluster), not 10x
+3. Principle 3: Temporary hack that will require painful rewrite at 1000+ clients
 
 Start over:
 - Use Odoo QWeb reports (boring pattern)
 - Use Odoo ORM (not raw SQL)
 - Simple statistics (not ML predictions)
-- Build for current scale + 10x"
+- Build foundations that scale to 1000+ clients without rewrites"
 
 ---
 
@@ -434,7 +434,7 @@ def process_payment(self, payment_id):
 **Principle Validation:**
 - Principle 1 (Measure): ✅ Bug measured (NoneType error reported)
 - Principle 2 (Boring): ✅ Standard null check (Python 101)
-- Principle 3 (10x): ✅ Right-sized fix (not over-engineered)
+- Principle 3 (Known Scale): ✅ Right-sized fix (foundations for 1000+ clients)
 - Principle 4 (ROI): ✅ Bug fix (high value, prevents errors)
 - Principle 5 (Files): ✅ Modified existing file only
 

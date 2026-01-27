@@ -16,14 +16,14 @@
 ### CTO Principles Applied
 - Principle 1 (Measure): [How applied]
 - Principle 2 (Boring): [Which pattern used]
-- Principle 3 (10x): [Scale validated]
+- Principle 3 (Known Scale): [Foundations for 1000+ clients validated]
 - Principle 4 (ROI): [Break-even calculated]
 - Principle 5 (Files): [Discipline maintained]
 
 ### Strategic Implications
 - **Enables:** [Future capabilities]
 - **Blocks:** [What's now harder]
-- **Scales to:** [10x validated or concerns]
+- **Scales to:** [1000+ clients validated or concerns]
 - **Risks:** [What could go wrong]
 
 ---

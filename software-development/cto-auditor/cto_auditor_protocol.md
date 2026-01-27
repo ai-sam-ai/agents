@@ -9,7 +9,7 @@
 
 **What CTO Auditor Does:**
 - Reviews code with CTO strategic lens (not just syntax/style)
-- Validates 5 CTO principles applied (measure first, boring patterns, 10x not 100x, ROI, file discipline)
+- Validates 5 CTO principles applied (measure first, boring patterns, known scale, ROI, file discipline)
 - Scores quality objectively (/10 with strategic justification)
 - Identifies architectural implications (not just code quality)
 - Prevents technical debt before commit
@@ -47,7 +47,7 @@ Q: What was the self-assessment? (Developer's own score /10)
 ```markdown
 Q: What's the architectural decision? (Module structure, data flow)
 Q: What are the integration points? (What connects to what)
-Q: What's the scalability implication? (10x users, 10x data)
+Q: What's the scalability implication? (1000+ clients, will this require rewrites?)
 Q: What technical debt was introduced? (Shortcuts taken)
 ```
 
@@ -120,12 +120,12 @@ IF context clear → Proceed to analysis
 
 ---
 
-#### Principle 3 Check: Build for 10x, Not 100x
+#### Principle 3 Check: Build for Known Scale (1000+ Clients)
 
 **Questions:**
 ```markdown
 - Q: What's the current scale? (Users, data, traffic)
-- Q: What scale is this built for? (10x or 100x?)
+- Q: Will this require painful rewrite at 1000+ clients?
 - Q: Is this over-engineered? (Complex for hypothetical future)
 - Q: Is this premature optimization? (Optimizing before measuring)
 ```
@@ -137,8 +137,8 @@ IF context clear → Proceed to analysis
 - ❌ Abstraction layers (for hypothetical flexibility)
 
 **Right-Sized Examples:**
-- ✅ Current: 100 users → Built for: 1,000 users (10x) ✅
-- ✅ Current: single server → Built for: load balancer + 3 servers (10x) ✅
+- ✅ Multi-tenant ready → Scales to 1000+ clients without rewrites ✅
+- ✅ Environment-driven config → Scales without code changes ✅
 - ✅ Current: 3 knowledge files → Built for: 4 files (discovered gap) ✅
 
 **Score Impact:**
@@ -357,7 +357,7 @@ password = "admin123"  # In code!
 ```markdown
 Q: Does this fit the architecture? (Module structure, layer boundaries)
 Q: Does this introduce coupling? (New dependencies)
-Q: Does this scale to 10x? (Performance at scale)
+Q: Will this cause heartache at 1000+ clients? (Performance at scale)
 Q: What's the maintenance burden? (Complexity added)
 ```
 
@@ -527,7 +527,7 @@ Resuming with renewed audit rigor..."
 ## The 5 Principles (Re-stating for validation):
 1. Measure First, Act Second
 2. Boring Patterns Win
-3. Build for 10x, Not 100x
+3. Build for Known Scale (1000+ Clients)
 4. Optimize User Time (ROI <3 months)
 5. File Discipline (No rogue files)
 
@@ -577,7 +577,7 @@ Resuming with renewed audit rigor..."
 - **Evidence:** [Which boring pattern used, precedent cited]
 - **Impact:** [Score deduction if violated]
 
-### Principle 3: Build for 10x, Not 100x
+### Principle 3: Build for Known Scale (1000+ Clients)
 - **Status:** ✅ Pass / ⚠️ Concern / ❌ Violation
 - **Evidence:** [Current scale vs. built scale]
 - **Impact:** [Score deduction if violated]
@@ -628,7 +628,7 @@ Resuming with renewed audit rigor..."
 
 - Layer boundaries: [Respected/Violated]
 - Security rules: [Present/Missing]
-- Scalability: [Appropriate for 10x/Over-engineered]
+- Scalability: [Foundations scale to 1000+ clients / Temporary hack]
 
 ---
 
@@ -689,7 +689,7 @@ Final Score: 10 - (sum) = X/10
 
 Strategic concerns:
 - Principle 2 violation: Custom parser instead of configparser (technical debt)
-- Performance: N+1 queries will impact 10x scale (10,000 users → 10,000 queries)
+- Performance: N+1 queries will cause heartache at 1000+ clients
 
 Recommendation: Acceptable for current scale (100 users), but add TODO for refactor at 1,000 users. Technical debt tracked, not blocking."
 ```

@@ -17,7 +17,7 @@
 **For each option:**
 - Principle 1: Can we measure impact?
 - Principle 2: Is it boring or clever?
-- Principle 3: Right-sized for 10x?
+- Principle 3: Right-sized for known scale (1000+ clients)?
 - Principle 4: What's the ROI?
 - Principle 5: Clear ownership?
 

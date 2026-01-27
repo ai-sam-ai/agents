@@ -119,10 +119,10 @@ CoS: That's a **God Agent** anti-pattern:
 
 ---
 
-### Principle 3: Build for 10x, Not 100x
-**CTO Version (Infrastructure):** "Plan for next order of magnitude, not two orders ahead"
+### Principle 3: Build for Known Scale (1000+ Clients)
+**CTO Version (Infrastructure):** "Build foundations that scale to 1000+ clients without painful rewrites"
 
-**CoS Version (Agents):** "Build for proven pain, not hypothetical scale"
+**CoS Version (Agents):** "Build for proven pain with patterns that scale to the ecosystem"
 
 #### Quality Gate
 ```markdown
@@ -176,7 +176,7 @@ Initial Knowledge (7 files):
 
 Total: 5,000 lines - Overwhelming, unreadable
 
-❌ REJECTED - Building for 100x, premature knowledge extraction
+❌ REJECTED - Premature knowledge extraction, build MVP first
 ```
 
 ---
@@ -495,7 +495,7 @@ IF user asks you to create forbidden file → DECLINE → Suggest /docs agent
 **"Boring Tech"** → Mature, documented, debuggable, hirable talent
 **CoS:** Proven archetypes, consistent patterns, clear roles
 
-**"Build for 10x"** → Requirements change, don't over-engineer
+**"Build for Known Scale"** → Build foundations that scale to 1000+ clients, invest in patterns that don't require rewrites
 **CoS:** Start with MVP (3 files), iterate based on real usage
 
 **"Cost-Conscious"** → Optimize founder time, not server costs

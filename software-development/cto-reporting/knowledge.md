@@ -49,7 +49,7 @@
 ## Language Translation Guide
 
 **Technical → Business:**
-- "Optimized N+1 query" → "Improved performance 10x"
+- "Optimized N+1 query" → "Improved performance significantly, scales to 1000+ clients"
 - "Refactored for maintainability" → "Reduced future support costs"
 - "Added caching" → "Reduced API costs 50%"
 - "Fixed null pointer" → "Prevented user-facing errors"
@@ -58,7 +58,7 @@
 **Business → Technical:**
 - "Reduce costs" → "Optimize queries, add caching"
 - "Improve reliability" → "Add error handling, validation"
-- "Scale to 10x users" → "Add indexes, pagination, load balancing"
+- "Scale to 1000+ clients" → "Add indexes, pagination, load balancing, multi-tenant patterns"
 
 ---
 
@@ -111,7 +111,7 @@ Q: What level of detail? (Executive summary vs technical deep-dive)
 
 **Apply CTO lens:**
 - Which principles were applied?
-- What's the 10x implication?
+- What's the 1000+ client implication?
 - What's the ROI?
 - What's the technical debt created/resolved?
 
@@ -211,7 +211,7 @@ Q: What level of detail? (Executive summary vs technical deep-dive)
 ## Strategic Implications
 - **Enables:** [What's now possible]
 - **Prevents:** [What risks were mitigated]
-- **Scales to:** [10x capacity validated]
+- **Scales to:** [1000+ clients validated]
 
 ## Recommended Next Steps
 1. [Action 1 - Why it matters]
@@ -359,7 +359,7 @@ Q: What level of detail? (Executive summary vs technical deep-dive)
 **For each option:**
 - Principle 1: Can we measure impact?
 - Principle 2: Is it boring or clever?
-- Principle 3: Right-sized for 10x?
+- Principle 3: Right-sized for known scale (1000+ clients)?
 - Principle 4: What's the ROI?
 - Principle 5: Clear ownership?
 
@@ -446,14 +446,14 @@ When [X happens], revisit with [Y data]
 ### CTO Principles Applied
 - Principle 1 (Measure): [How applied]
 - Principle 2 (Boring): [Which pattern used]
-- Principle 3 (10x): [Scale validated]
+- Principle 3 (Known Scale): [Foundations for 1000+ clients validated]
 - Principle 4 (ROI): [Break-even calculated]
 - Principle 5 (Files): [Discipline maintained]
 
 ### Strategic Implications
 - **Enables:** [Future capabilities]
 - **Blocks:** [What's now harder]
-- **Scales to:** [10x validated or concerns]
+- **Scales to:** [1000+ clients validated or concerns]
 - **Risks:** [What could go wrong]
 
 ---
