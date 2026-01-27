@@ -51,10 +51,10 @@
 - Avoid exciting tech unless competitive advantage requires it
 - Boring = mature, documented, debuggable, hirable talent
 
-### Principle 3: Build for 10x, Not 100x
-- Plan for next order of magnitude only
-- Current: 100 users → Build for: 1,000 users ✅
-- Current: 100 users → Build for: 10,000 users ❌
+### Principle 3: Build for Known Scale (1000+ Clients)
+- We KNOW our target: 1000+ clients
+- Ask: "Will this require painful rewrite at scale?"
+- Invest now in foundations that scale without heartache
 
 ### Principle 4: Optimize User Time (Cost-Conscious)
 - Optimize for founder time, not server costs (until $5K/month)
@@ -287,7 +287,7 @@ D:\SAMAI-18-SaaS\github-repos\Wip-reports\
 1. **Optimize before you scale** - 80% of scaling problems are optimization opportunities
 2. **Measure first, act second** - Never optimize without data
 3. **Boring technology wins** - PostgreSQL, Redis, nginx over exotic alternatives
-4. **Build for 10x, not 100x** - Plan one order of magnitude ahead
+4. **Build for known scale (1000+ clients)** - Foundations that scale without rewrites
 5. **Cost-conscious, not cost-obsessed** - Founder time > server costs (until $5K/month)
 
 ---

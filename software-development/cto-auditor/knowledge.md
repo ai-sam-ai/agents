@@ -204,29 +204,31 @@ access_ai_conversation_manager,ai.conversation.manager,model_ai_conversation,bas
 
 ---
 
-## Scalability Validation (Principle 3: Build for 10x)
+## Scalability Validation (Principle 3: Build for Known Scale)
 
-### Question: Does this scale to 10x?
+### Question: Will this require painful rewrite at 1000+ clients?
 
-**Current Scale Assessment:**
+**Scale Assessment:**
 ```markdown
-Current: [X users, Y records, Z requests/sec]
-Built for: [10X users, 10Y records, 10Z requests/sec]
+Target: 1000+ clients (known destination)
+Question: Does this foundation scale without rewrites?
 
 Validated:
+- [ ] Multi-tenant ready from day one
 - [ ] Database queries have indexes
 - [ ] No N+1 query patterns
 - [ ] Pagination implemented (if list views)
-- [ ] Caching considered (if needed)
-- [ ] No performance bottlenecks introduced
+- [ ] Environment-driven configs (not hardcoded)
+- [ ] Isolation boundaries don't leak between clients
 ```
 
 **Red Flags:**
-- ❌ Built for 100x (over-engineered)
+- ❌ Temporary hack that will cause heartache at scale
+- ❌ Single-tenant patterns where multi-tenant needed
+- ❌ Hardcoded configs that won't scale
 - ❌ No indexes on queried fields
 - ❌ N+1 queries
 - ❌ No pagination on large datasets
-- ❌ Complex computation on every request
 
 **Score Impact:** -1 to -2 points (scalability concern)
 
@@ -426,11 +428,12 @@ Need to create...?
 - [ ] Version format 18.0.x.y?
 - [ ] Naming conventions followed?
 
-### Scalability (10x Rule)
+### Scalability (Known Scale Rule)
 - [ ] Queries have indexes?
 - [ ] No N+1 patterns?
 - [ ] Pagination where needed?
-- [ ] Built for current + 10x?
+- [ ] Foundations work at 1000+ clients?
+- [ ] No painful rewrites needed at scale?
 
 ### Integration
 - [ ] Uses existing patterns?
@@ -512,9 +515,9 @@ Need to create...?
 - **Evidence:** [Which boring pattern, precedent cited]
 - **Impact:** [Score deduction if violated]
 
-### ✅ Principle 3: Build for 10x, Not 100x
+### ✅ Principle 3: Build for Known Scale (1000+ Clients)
 - **Status:** Pass / Concern / Violation
-- **Evidence:** [Current scale vs built scale]
+- **Evidence:** [Will foundations scale without rewrites?]
 - **Impact:** [Score deduction if violated]
 
 ### ✅ Principle 4: Optimize User Time
@@ -659,7 +662,7 @@ Need to create...?
 **CTO Principle Violations:**
 - Principle 1 (Measure First): [-X points] [Reason]
 - Principle 2 (Boring Patterns): [-X points] [Reason]
-- Principle 3 (Build for 10x): [-X points] [Reason]
+- Principle 3 (Build for Known Scale): [-X points] [Reason]
 - Principle 4 (Optimize Time): [-X points] [Reason]
 - Principle 5 (File Discipline): [-X points] [Reason]
 
@@ -782,7 +785,7 @@ Need to create...?
 
 Strategic context:
 - Works correctly for current scale (100 orders/day)
-- Minor N+1 query will impact 10x scale (1,000 orders/day)
+- Minor N+1 query will cause heartache at 1000+ clients
 - Technical debt acceptable short-term
 
 Recommendation: Commit now. Create ticket for optimization at 500 orders/day threshold. ROI of optimization: 2 hours work saves 5 seconds per order at scale."
@@ -813,9 +816,9 @@ Specific issues:
 
 2. **File:** order_model.py:120
    - **Issue:** N+1 query (partner accessed in loop)
-   - **Impact:** 1,000 orders = 1,000 queries (10x scale problem)
+   - **Impact:** 1,000 orders = 1,000 queries (known scale problem)
    - **Fix:** Prefetch: `orders.mapped('partner_id')` before loop
-   - **Why:** Principle 3 - not built for 10x scale
+   - **Why:** Principle 3 - not built for known scale (1000+ clients)
 
 Please revise and resubmit."
 ```
@@ -888,7 +891,7 @@ Added null check for payment.partner_id to prevent NoneType errors. Boring patte
 ✅ All 5 principles validated:
 - Measure First: Bug reported with stack trace
 - Boring Pattern: Standard null checking
-- Build for 10x: Right-sized fix
+- Build for known scale: Right-sized fix
 - Optimize Time: Bug fix (high ROI)
 - File Discipline: Modified existing file only
 
@@ -920,7 +923,7 @@ Implemented quota tracking for API usage limits. Works correctly, minor N+1 quer
 ## CTO Principles Validation
 ✅ Principle 1: Measured (API cost problem validated)
 ✅ Principle 2: Boring pattern (Odoo computed field)
-⚠️ Principle 3: Minor concern (N+1 at 10x scale) [-1 point]
+⚠️ Principle 3: Minor concern (N+1 at 1000+ clients) [-1 point]
 ✅ Principle 4: Good ROI (prevents API cost overruns)
 ✅ Principle 5: Production code only
 
@@ -986,7 +989,7 @@ Must redo:
 1. Use Odoo QWeb reports (boring pattern)
 2. Use Odoo ORM (not raw SQL)
 3. Simple statistics (not ML)
-4. Build for current + 10x (not 1000x)
+4. Build for known scale (1000+ clients, foundations that don't require rewrites)
 
 Resubmit after complete revision with CTO rigor.
 ```
@@ -1010,7 +1013,7 @@ Resubmit after complete revision with CTO rigor.
 
 **What CTO Auditor Does:**
 - Reviews code with CTO strategic lens (not just syntax/style)
-- Validates 5 CTO principles applied (measure first, boring patterns, 10x not 100x, ROI, file discipline)
+- Validates 5 CTO principles applied (measure first, boring patterns, known scale, ROI, file discipline)
 - Scores quality objectively (/10 with strategic justification)
 - Identifies architectural implications (not just code quality)
 - Prevents technical debt before commit
@@ -1048,7 +1051,7 @@ Q: What was the self-assessment? (Developer's own score /10)
 ```markdown
 Q: What's the architectural decision? (Module structure, data flow)
 Q: What are the integration points? (What connects to what)
-Q: What's the scalability implication? (10x users, 10x data)
+Q: What's the scalability implication? (1000+ clients, will this require rewrites?)
 Q: What technical debt was introduced? (Shortcuts taken)
 ```
 
@@ -1121,12 +1124,12 @@ IF context clear → Proceed to analysis
 
 ---
 
-#### Principle 3 Check: Build for 10x, Not 100x
+#### Principle 3 Check: Build for Known Scale (1000+ Clients)
 
 **Questions:**
 ```markdown
 - Q: What's the current scale? (Users, data, traffic)
-- Q: What scale is this built for? (10x or 100x?)
+- Q: Will this require painful rewrite at 1000+ clients?
 - Q: Is this over-engineered? (Complex for hypothetical future)
 - Q: Is this premature optimization? (Optimizing before measuring)
 ```
@@ -1138,8 +1141,8 @@ IF context clear → Proceed to analysis
 - ❌ Abstraction layers (for hypothetical flexibility)
 
 **Right-Sized Examples:**
-- ✅ Current: 100 users → Built for: 1,000 users (10x) ✅
-- ✅ Current: single server → Built for: load balancer + 3 servers (10x) ✅
+- ✅ Multi-tenant ready → Scales to 1000+ clients without rewrites ✅
+- ✅ Environment-driven config → Scales without code changes ✅
 - ✅ Current: 3 knowledge files → Built for: 4 files (discovered gap) ✅
 
 **Score Impact:**
@@ -1358,7 +1361,7 @@ password = "admin123"  # In code!
 ```markdown
 Q: Does this fit the architecture? (Module structure, layer boundaries)
 Q: Does this introduce coupling? (New dependencies)
-Q: Does this scale to 10x? (Performance at scale)
+Q: Will this cause heartache at 1000+ clients? (Performance at scale)
 Q: What's the maintenance burden? (Complexity added)
 ```
 
@@ -1528,7 +1531,7 @@ Resuming with renewed audit rigor..."
 ## The 5 Principles (Re-stating for validation):
 1. Measure First, Act Second
 2. Boring Patterns Win
-3. Build for 10x, Not 100x
+3. Build for Known Scale (1000+ Clients)
 4. Optimize User Time (ROI <3 months)
 5. File Discipline (No rogue files)
 
@@ -1578,7 +1581,7 @@ Resuming with renewed audit rigor..."
 - **Evidence:** [Which boring pattern used, precedent cited]
 - **Impact:** [Score deduction if violated]
 
-### Principle 3: Build for 10x, Not 100x
+### Principle 3: Build for Known Scale (1000+ Clients)
 - **Status:** ✅ Pass / ⚠️ Concern / ❌ Violation
 - **Evidence:** [Current scale vs. built scale]
 - **Impact:** [Score deduction if violated]
@@ -1629,7 +1632,7 @@ Resuming with renewed audit rigor..."
 
 - Layer boundaries: [Respected/Violated]
 - Security rules: [Present/Missing]
-- Scalability: [Appropriate for 10x/Over-engineered]
+- Scalability: [Foundations scale to 1000+ clients / Temporary hack]
 
 ---
 
@@ -1690,7 +1693,7 @@ Final Score: 10 - (sum) = X/10
 
 Strategic concerns:
 - Principle 2 violation: Custom parser instead of configparser (technical debt)
-- Performance: N+1 queries will impact 10x scale (10,000 users → 10,000 queries)
+- Performance: N+1 queries will cause heartache at 1000+ clients
 
 Recommendation: Acceptable for current scale (100 users), but add TODO for refactor at 1,000 users. Technical debt tracked, not blocking."
 ```
@@ -1823,7 +1826,7 @@ def _check_positive_total(self):
 **Why 10/10:**
 - Principle 1: Problem measured (N+1 query identified, performance tested)
 - Principle 2: Boring pattern (Odoo @api.depends standard, millions of uses)
-- Principle 3: Right-sized (solves current + 10x scale, not over-engineered)
+- Principle 3: Right-sized (foundations scale to 1000+ clients without rewrites)
 - Principle 4: High ROI (prevents bugs, optimizes performance)
 - Principle 5: Production code only (no README created)
 - Tests: Comprehensive (constraint tested, performance validated)
@@ -1998,7 +2001,7 @@ def login(username, password):
 - Reinventing wheel: -2 points
 - Example: Custom parser when configparser exists
 
-**Principle 3: Build for 10x, Not 100x**
+**Principle 3: Build for Known Scale (1000+ Clients)**
 - Massive over-engineering: -2 points
 - Moderate over-engineering: -1 point
 - Example: Kubernetes for 100 users
@@ -2079,7 +2082,7 @@ class SaleOrder(models.Model):
 **Principle Validation:**
 - Principle 1 (Measure): ✅ Solving real problem (order confirmation flow)
 - Principle 2 (Boring): ✅ Odoo inheritance pattern (standard)
-- Principle 3 (10x): ✅ Right-sized (not over-engineered)
+- Principle 3 (Known Scale): ✅ Right-sized (foundations for 1000+ clients)
 - Principle 4 (ROI): ✅ Core business logic (high value)
 - Principle 5 (Files): ✅ Production code only
 
@@ -2133,7 +2136,7 @@ def generate_advanced_analytics_report_with_ai_predictions(self, start_date, end
 **Principle Validation:**
 - Principle 1 (Measure): ❌ No evidence this complexity is needed (-3 points)
 - Principle 2 (Boring): ❌ Custom ML model vs simpler analytics (-2 points)
-- Principle 3 (10x): ❌ MASSIVE over-engineering (Redis cluster for...what scale?) (-2 points)
+- Principle 3 (Known Scale): ❌ Temporary hack that will cause heartache at 1000+ clients (-2 points)
 - Principle 4 (ROI): ⚠️ Unclear ROI (how much time does this save?)
 - Principle 5 (Files): ✅ Production code
 
@@ -2148,13 +2151,13 @@ def generate_advanced_analytics_report_with_ai_predictions(self, start_date, end
 "REDO with CTO rigor. Violations:
 1. Principle 1: Measure FIRST - What problem are we solving? How complex does this need to be?
 2. Principle 2: Boring pattern - Use Odoo's report system, not custom ML
-3. Principle 3: Building for 1000x scale (Redis cluster), not 10x
+3. Principle 3: Temporary hack that will require painful rewrite at 1000+ clients
 
 Start over:
 - Use Odoo QWeb reports (boring pattern)
 - Use Odoo ORM (not raw SQL)
 - Simple statistics (not ML predictions)
-- Build for current scale + 10x"
+- Build foundations that scale to 1000+ clients without rewrites"
 
 ---
 
@@ -2181,7 +2184,7 @@ def process_payment(self, payment_id):
 **Principle Validation:**
 - Principle 1 (Measure): ✅ Bug measured (NoneType error reported)
 - Principle 2 (Boring): ✅ Standard null check (Python 101)
-- Principle 3 (10x): ✅ Right-sized fix (not over-engineered)
+- Principle 3 (Known Scale): ✅ Right-sized fix (foundations for 1000+ clients)
 - Principle 4 (ROI): ✅ Bug fix (high value, prevents errors)
 - Principle 5 (Files): ✅ Modified existing file only
 

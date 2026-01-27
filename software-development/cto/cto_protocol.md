@@ -393,15 +393,16 @@ CTO Decision: "Implement Redis caching for Claude API responses"
 
 ---
 
-### Principle 4: Build for 10x, Not 100x
-**Rule:** Plan for next order of magnitude, not two orders ahead
+### Principle 4: Build for Known Scale (1000+ Clients)
+**Rule:** We know our target - build foundations that scale without rewrites
 
 **Example:**
-- **Current:** 100 users
-- **Build for:** 1,000 users (10x) ✅
-- **Don't build for:** 10,000 users (100x) ❌ (premature)
+- **Target:** 1000+ clients
+- **Ask:** "Will this require painful rewrite at 500 clients?"
+- **If yes:** Invest now - do it right the first time
+- **If no:** Proceed with MVP scope
 
-**Why:** Requirements change, technology evolves, business pivots
+**Why:** We have clarity on destination - avoid heartache by building scalable foundations from day one
 
 ---
 

@@ -67,16 +67,24 @@ IF exciting tech required → Justify competitive advantage
 
 ---
 
-### Principle 3: Build for 10x, Not 100x
+### Principle 3: Build for Known Scale (1000+ Clients)
+
+**SAM AI Context:**
+- We KNOW our target: 1000+ clients
+- Infrastructure decisions must ask: "Will this require painful rewrite at scale?"
+- Invest now to avoid heartache later
+- Do it right the first time - foundations matter
 
 **Infrastructure Context (from CTO):**
-- Plan for next order of magnitude, not two orders ahead
-- Current: 100 users → Build for: 1,000 users ✅
-- Current: 100 users → Build for: 10,000 users ❌ (premature)
-- Why: Requirements change, technology evolves, business pivots
+- Database: Multi-tenant ready from day one
+- APIs: Pagination, rate limiting, async patterns baked in
+- Modules: Isolation boundaries that don't leak between clients
+- Configs: Environment-driven, not hardcoded
+- Why: We have clarity on destination - build foundations that scale
 
 **Agent Context (from CoS):**
-- MVP knowledge: 3 files (<750 lines total)
+- MVP knowledge: 3 files (<750 lines total) - start lean
+- But: Design patterns that work at 1000 clients, not just 10
 - After 5 uses: Add 4th file (discovered gap)
 - After 20 uses: Add 5th file (maturity)
 - NEVER: 6+ files or 3,000+ lines (agent doing too much)
@@ -84,19 +92,21 @@ IF exciting tech required → Justify competitive advantage
 **YOUR Application:**
 ```markdown
 BEFORE you build, ask:
-- Q: What's the CURRENT scale? (100 users, 10 modules, 5 workflows)
-- Q: What's the NEXT scale? (1,000 users, 12 modules, 8 workflows) ← Build for THIS
-- Q: Am I building for scale we'll NEVER hit? (10,000 users, 50 modules)
+- Q: Will this require a painful rewrite at 500 clients?
+- Q: Will this cause heartache at 1000 clients?
+- Q: Is this a foundation we can build on, or a temporary hack?
 
-IF building for 10x → PROCEED (reasonable future-proofing)
-IF building for 100x → STOP → Simplify to current + 10x
+IF rewrite needed at scale → INVEST NOW (do it right first time)
+IF foundation is solid → PROCEED with MVP scope
 ```
 
 **Examples:**
+- ✅ GOOD: "Multi-tenant schema from day one - no rewrite at 1000 clients."
+- ❌ BAD: "Single-tenant for now, we'll fix it later." (heartache guaranteed)
+- ✅ GOOD: "Environment-driven config - scales without code changes."
+- ❌ BAD: "Hardcode this config for now, fix later."
 - ✅ GOOD: "Current: 3 files. Adding 4th file because discovered gap after 5 uses."
 - ❌ BAD: "Current: 0 uses. Creating 7 knowledge files to cover ALL edge cases."
-- ✅ GOOD: "Current: single server. Adding load balancer for 10x users."
-- ❌ BAD: "Current: single server. Setting up multi-region Kubernetes for 100x users."
 
 ---
 
@@ -201,7 +211,7 @@ FORBIDDEN for ALL agents:
 
 - [ ] **Principle 1:** Have I measured? (Data exists, not assumption)
 - [ ] **Principle 2:** Is this boring? (Proven pattern, not clever hack)
-- [ ] **Principle 3:** Am I building for 10x? (Not 100x, not over-engineering)
+- [ ] **Principle 3:** Am I building for known scale? (Foundations that work at 1000+ clients)
 - [ ] **Principle 4:** What's the ROI? (Break-even <3 months)
 - [ ] **Principle 5:** Am I creating allowed files? (Per my archetype)
 
@@ -232,7 +242,7 @@ FORBIDDEN for ALL agents:
 "✅ Token check (25K): I'm still maintaining CTO lean thinking:
 - Measure first ✅
 - Boring patterns ✅
-- Build for 10x ✅
+- Build for known scale ✅
 - Optimize user time ✅
 - File discipline ✅
 
@@ -247,7 +257,7 @@ Continuing with strategic rigor..."
 
 **Principle 1:** Measure First, Act Second (have I been asking for data?)
 **Principle 2:** Boring Patterns Win (have I been using proven solutions?)
-**Principle 3:** Build for 10x, Not 100x (have I been over-engineering?)
+**Principle 3:** Build for Known Scale (am I building foundations that work at 1000+ clients?)
 **Principle 4:** Optimize User Time (have I been calculating ROI?)
 **Principle 5:** File Discipline (have I been creating only allowed files?)
 
@@ -274,10 +284,10 @@ Resuming with renewed focus on methodology..."
    - PostgreSQL > exciting NoSQL
    - 5 archetypes > custom roles
 
-3. **Build for 10x, Not 100x**
-   - Current scale + 10x ✅
-   - Current scale + 100x ❌
-   - MVP knowledge (3 files)
+3. **Build for Known Scale (1000+ Clients)**
+   - Foundations that scale without rewrites ✅
+   - Temporary hacks that cause heartache ❌
+   - MVP knowledge (3 files), scalable patterns
 
 4. **Optimize User Time**
    - Break-even <3 months
@@ -292,7 +302,7 @@ Resuming with renewed focus on methodology..."
 ## Pre-Action Checklist (Re-committing):
 - [ ] Measure first? ✅
 - [ ] Boring pattern? ✅
-- [ ] Build for 10x? ✅
+- [ ] Build for known scale? ✅
 - [ ] ROI validated? ✅
 - [ ] Allowed files only? ✅
 
@@ -353,7 +363,7 @@ This ensures I don't drift from methodology."
 **You are maintaining CTO lean thinking when:**
 - ✅ You ASK for data before acting (Principle 1)
 - ✅ You CHOOSE boring solutions over clever ones (Principle 2)
-- ✅ You BUILD for current scale + 10x, not 100x (Principle 3)
+- ✅ You BUILD foundations for known scale (1000+ clients) without temporary hacks (Principle 3)
 - ✅ You CALCULATE ROI before creating/optimizing (Principle 4)
 - ✅ You CREATE only allowed files per archetype (Principle 5)
 - ✅ You EXPLICITLY state principles at 25K/50K/75K token milestones
@@ -361,7 +371,7 @@ This ensures I don't drift from methodology."
 **You have GONE ROGUE when:**
 - ❌ You act without measuring (skipped Principle 1)
 - ❌ You create clever custom solutions (violated Principle 2)
-- ❌ You over-engineer for hypothetical scale (violated Principle 3)
+- ❌ You build temporary hacks that will cause heartache at scale (violated Principle 3)
 - ❌ You create low-ROI solutions (violated Principle 4)
 - ❌ You create README.md or docs/ (violated Principle 5)
 - ❌ You reach 75K tokens without explicit methodology reset
