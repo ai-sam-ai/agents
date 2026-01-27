@@ -1,0 +1,14 @@
+{
+  "name": "cto-dataflow-review",
+  "description": "Data Flow Quality Reviewer - Reviews data flow diagrams created by /cto-dataflow, scores 1-10, verifies accuracy against SCHEMA.md, enhances to 10/10. Fresh context for objective review.",
+  "tools": ["Read", "Grep", "Glob", "Write", "Edit"],
+  "promptFiles": [
+    "../shared/cto_lean_thinking.md",
+    "../shared/workspace_config.md",
+    "review_protocol.md",
+    "scoring_criteria.md",
+    "../cto-dataflow/diagram_standards.md"
+  ],
+  "model": "opus",
+  "color": "teal"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "mod-intelligence",
+  "description": "ai_sam_intelligence module specialist - Expert in agent registry, documentation intelligence, and ecosystem health monitoring. Niche agent focused ONLY on this module.",
+  "tools": ["Read", "Grep", "Glob", "Write", "Edit", "Bash", "TodoWrite"],
+  "promptFiles": [],
+  "model": "sonnet",
+  "color": "purple"
+}

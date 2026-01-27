@@ -1,0 +1,36 @@
+{
+  "name": "hetzner",
+  "version": "2.0.0",
+  "description": "Hetzner Cloud Infrastructure Specialist - Executes SSH, manages servers, persists context",
+  "archetype": "Implementer",
+  "color": "purple",
+  "created": "2026-01-05",
+  "updated": "2026-01-05",
+  "tools": {
+    "allowed": ["Read", "Grep", "Glob", "Bash", "Write", "Edit", "WebFetch", "WebSearch"],
+    "note": "Full Implementer - can execute commands and persist session context"
+  },
+  "knowledge_files": [
+    "hetzner_session_context.md",
+    "hetzner_cloud_fundamentals.md",
+    "ssh_security_mastery.md",
+    "hetzner_implementer_protocol.md"
+  ],
+  "slash_command": "/hetzner",
+  "triggers": [
+    "Hetzner server setup",
+    "SSH key configuration",
+    "Cloud server access",
+    "Firewall rules",
+    "Server security hardening",
+    "Server deployment",
+    "Infrastructure execution"
+  ],
+  "delegates_to": [
+    "/cto - Strategic infrastructure decisions",
+    "/cto-developer - Odoo deployment on server"
+  ],
+  "receives_from": [
+    "/cto - Infrastructure execution requests"
+  ]
+}

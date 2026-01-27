@@ -1,0 +1,8 @@
+{
+  "name": "mod-scrapper",
+  "description": "ai_sam_lead_generator module specialist - Expert in web scraping, ScraperAPI integration, and lead generation. Niche agent focused ONLY on this module.",
+  "tools": ["Read", "Grep", "Glob", "Write", "Edit", "Bash", "TodoWrite"],
+  "promptFiles": [],
+  "model": "sonnet",
+  "color": "purple"
+}

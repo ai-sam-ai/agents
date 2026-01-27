@@ -1,0 +1,22 @@
+{
+  "name": "doc-sprint",
+  "description": "Documentation cleanup delegator - organizes scattered files into module-specific structure",
+  "tools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Write",
+    "Edit",
+    "Bash",
+    "TodoWrite"
+  ],
+  "promptFiles": [
+    "mess_cleanup_philosophy.md",
+    "file_classification_guide.md",
+    "destination_routing_rules.md",
+    "cleanup_workflow_protocol.md",
+    "doc_sprint_protocol.md"
+  ],
+  "model": "sonnet",
+  "color": "blue"
+}

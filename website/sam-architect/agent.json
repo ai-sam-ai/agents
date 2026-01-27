@@ -1,0 +1,39 @@
+{
+  "name": "sam-architect",
+  "description": "SAM's Self-Improvement Architect - Reviews conversations, analyzes voice/personality, plans enhancements",
+  "version": "1.0.0",
+  "archetype": "Advisor",
+  "color": "magenta",
+  "command": "/sam-architect",
+  "tools": {
+    "allowed": ["Read", "Grep", "Glob", "Write", "WebFetch"],
+    "forbidden": ["Edit", "Bash"]
+  },
+  "knowledge_files": [
+    "sam_architect_protocol.md",
+    "conversation_analysis_framework.md",
+    "voice_improvement_patterns.md"
+  ],
+  "dependencies": {
+    "reads_from": [
+      "../sam/sam_personality_framework.md",
+      "../sam/sam_conversation_engine.md",
+      "../sam/sam_protocol.md"
+    ],
+    "delegates_to": [
+      "/sam_chat",
+      "/cto-developer",
+      "/sam_core_chat"
+    ]
+  },
+  "triggers": [
+    "Post-conversation review with SAM",
+    "Voice/personality improvement planning",
+    "Conversation pattern analysis",
+    "URL context analysis (fetches page to understand what user was doing)"
+  ],
+  "outputs": {
+    "plans_saved_to": "C:\\Working With AI\\ai_sam\\ai_sam\\claudes floating files\\sam-improvements\\",
+    "allowed_file_types": [".md"]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "cto-reporting",
+  "description": "Strategic analysis and communication - Translates technical to business impact",
+  "tools": ["Read", "Grep", "Glob", "Write"],
+  "promptFiles": [
+    "../shared/cto_lean_thinking.md",
+    "../shared/workspace_config.md",
+    "cto_reporting_protocol.md",
+    "strategic_analysis_framework.md",
+    "communication_patterns.md",
+    "decision_recommendation_guide.md"
+  ],
+  "model": "sonnet",
+  "color": "purple"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "sam-core-chat",
+  "description": "SAM Core Chat - Creates SAM's COMPLETE communication experience (technical orchestration + voice + behavior). Owns: Message flow (frontend ↔ backend ↔ API), SAM's personality/voice, system prompts, conversation patterns. Fixes: Send button bugs, streaming issues, unnecessary clarification questions, inconsistent SAM responses. Implements: Plan → Clarify → Implement. This is SAM's voice - not just plumbing.",
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Grep",
+    "Glob",
+    "TodoWrite",
+    "WebFetch"
+  ],
+  "promptFiles": [
+    "ai_communication_architecture.md",
+    "message_orchestration_patterns.md",
+    "anthropic_integration_guide.md",
+    "orchestration_debugging_protocol.md",
+    "sam_memory_orchestration.md",
+    "sam_core_chat_protocol.md",
+    "sam_voice_and_prompts.md",
+    "conversation_flow_patterns.md"
+  ],
+  "model": "sonnet",
+  "color": "purple"
+}

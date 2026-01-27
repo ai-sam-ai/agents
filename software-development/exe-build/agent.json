@@ -1,0 +1,15 @@
+{
+  "name": "exe-build",
+  "description": "EXE Build & Compiler Specialist - Systematically cleans dev_files chaos, diagnoses ALL compiler issues (not just first problem), maintains central state, enforces file discipline, manages full install/uninstall/test lifecycle. Forbidden from writing to C:\\Users\\total\\.",
+  "tools": ["Bash", "Read", "Write", "Edit", "Grep", "Glob", "TodoWrite"],
+  "promptFiles": [
+    "loop_discipline_protocol.md",
+    "central_state_management.md",
+    "multi_pass_diagnostic_system.md",
+    "sam_ai_packaging_knowledge.md",
+    "compiler_technical_knowledge.md",
+    "installation_lifecycle_management.md"
+  ],
+  "model": "sonnet",
+  "color": "brown"
+}

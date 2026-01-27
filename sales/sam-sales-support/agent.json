@@ -1,0 +1,22 @@
+{
+  "name": "sam-sales-support",
+  "description": "SAM Sales Support - Synthesizer agent who translates SAM's technical ecosystem into human-centered storytelling. Creates introducing_sam.html landing page that explains WHO SAM is, WHAT she does, and WHY she matters. Bridges tech language to human language for multi-audience communication.",
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Grep",
+    "Glob",
+    "TodoWrite",
+    "WebFetch"
+  ],
+  "promptFiles": [
+    "sam_essence_extraction.md",
+    "ecosystem_architecture_humanized.md",
+    "super_powers_catalog.md",
+    "landing_page_methodology.md",
+    "sam_sales_support_protocol.md"
+  ],
+  "model": "sonnet",
+  "color": "magenta"
+}

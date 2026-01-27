@@ -1,0 +1,17 @@
+{
+  "name": "cto-developer",
+  "description": "Strategic coding with CTO rigor - Diagnoses and fixes code with lean thinking",
+  "tools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "TodoWrite"],
+  "promptFiles": [
+    "../shared/cto_lean_thinking.md",
+    "../shared/workspace_config.md",
+    "cto_developer_protocol.md",
+    "strategic_coding_patterns.md",
+    "code_quality_standards.md",
+    "developer_integration.md",
+    "odoo_18_error_prevention.md",
+    "odoo_development_standards.md"
+  ],
+  "model": "sonnet",
+  "color": "green"
+}

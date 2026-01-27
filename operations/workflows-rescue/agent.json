@@ -1,0 +1,14 @@
+{
+  "name": "workflows-rescue",
+  "description": "Workflows Rescue Mission - Deep system mapping with breakpoint identification to prevent debug hell after 93% code reduction",
+  "tools": ["Read", "Grep", "Glob", "Write", "TodoWrite", "Bash"],
+  "promptFiles": [
+    "rescue_mission_protocol.md",
+    "three_layer_architecture.md",
+    "functionality_inventory_guide.md",
+    "breakpoint_analysis_methodology.md",
+    "html_bible_structure.md"
+  ],
+  "model": "sonnet",
+  "color": "red"
+}

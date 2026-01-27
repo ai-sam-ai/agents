@@ -1,0 +1,14 @@
+{
+  "name": "cto-dataflow",
+  "description": "CTO Data Flow Analyst - Creates visual data flow diagrams showing how data moves between SAM AI modules. Reads existing SCHEMA.md and META.md to understand modules, then maps API calls, model relationships, and data transformations. Outputs Mermaid diagrams.",
+  "tools": ["Read", "Grep", "Glob", "Write", "Edit"],
+  "promptFiles": [
+    "../shared/cto_lean_thinking.md",
+    "../shared/workspace_config.md",
+    "dataflow_protocol.md",
+    "diagram_standards.md",
+    "../cto-module-docs/four_file_standard.md"
+  ],
+  "model": "sonnet",
+  "color": "green"
+}

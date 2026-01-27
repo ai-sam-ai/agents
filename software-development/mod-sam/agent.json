@@ -1,0 +1,15 @@
+{
+  "name": "mod-sam",
+  "description": "Core infrastructure specialist for ai_brain + ai_sam modules. Specializes in Claude API integration, context builder, canvas skeleton core, universal controllers, data model architecture (65+ models), and API infrastructure management. Works ONLY on these 2 foundation modules.",
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Glob",
+    "Grep",
+    "Bash",
+    "TodoWrite"
+  ],
+  "model": "sonnet",
+  "color": "blue"
+}

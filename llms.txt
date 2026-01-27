@@ -1,0 +1,114 @@
+# SAM AI Agents Registry
+
+> Structured agent definitions for the SAM AI ecosystem.
+> This file helps AI assistants navigate and utilize the agent registry.
+
+## Quick Start
+
+**Registry endpoint:** https://ai-sam-ai.github.io/agents/index.json
+
+Fetch the registry to discover available agents, then load specific agent configs as needed.
+
+## Registry Schema (index.json)
+
+```
+{
+  "version": "x.x.x",
+  "updated": "YYYY-MM-DD",
+  "base_url": "https://ai-sam-ai.github.io/agents",
+  "agents": [...]
+}
+```
+
+**Agent listing fields:**
+| Field | Purpose |
+|-------|---------|
+| `id` | Unique identifier (use for lookups) |
+| `name` | Display name |
+| `description` | What this agent does |
+| `icon` | Emoji representation |
+| `status` | "active" or "planned" |
+| `path` | Folder containing full config |
+| `use_cases` | Where this agent is deployed |
+| `triggers` | Keywords that activate this agent |
+
+## Loading an Agent
+
+1. Fetch registry: `GET /index.json`
+2. Find agent by `id` or match `triggers` to user input
+3. Fetch full config: `GET /{path}/agent.json`
+4. Load knowledge files listed in `knowledge_files[]`
+
+**Example flow:**
+```
+User says: "How much does this cost?"
+  → Match trigger: "how much" → sales-agent
+  → Fetch: /sales-agent/agent.json
+  → Load knowledge files for pricing context
+```
+
+## Agent Configuration Schema (agent.json)
+
+Each agent folder contains:
+
+```
+{agent-id}/
+├── agent.json      # Full configuration
+├── README.md       # Human documentation
+└── knowledge/      # Domain expertise files
+    ├── topic1.md
+    └── topic2.md
+```
+
+**agent.json structure:**
+| Section | Purpose |
+|---------|---------|
+| `persona` | Name, greeting, personality, voice |
+| `knowledge_files` | Paths to load for context |
+| `behavior` | Conversation flow, discovery questions, closing signals |
+| `escalation` | When and how to hand off to humans |
+| `guardrails` | What to never/always do, topics to avoid |
+| `cta_options` | Calls-to-action by intent level |
+| `tools` | Allowed and forbidden capabilities |
+
+## Shared Resources
+
+All agents inherit from:
+- `shared/brand_voice.md` - Tone and communication style
+- `shared/company_info.md` - Company facts and context
+- `shared/escalation_rules.md` - Human handoff protocols
+
+## Navigation Guide for AI
+
+**Finding the right agent:**
+1. Check `triggers[]` for keyword matches
+2. Check `use_cases[]` for deployment context
+3. Check `status` - only use "active" agents in production
+
+**Loading efficiently:**
+- Start with registry, don't fetch all agent configs
+- Load knowledge files on-demand based on conversation topic
+- Cache configs - they change infrequently
+
+**When to escalate:**
+- Check `escalation.triggers[]` in agent config
+- Use `escalation.message` template for handoff
+- Route to `escalation.contact`
+
+## Current Agents
+
+| ID | Status | Purpose |
+|----|--------|---------|
+| sales-agent | active | Landing page sales conversations |
+| support-agent | planned | Client support and troubleshooting |
+| onboarding-agent | planned | New client setup guidance |
+
+## Updates
+
+This registry is auto-synced from the SAM AI development repository.
+Check `updated` field in index.json for last modification date.
+
+---
+
+Source: https://github.com/ai-sam-ai/30_samai_saas_host_management
+Documentation: https://sme.ec/documentation

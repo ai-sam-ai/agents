@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-01-27",
+  "base_url": "https://ai-sam-ai.github.io/agents",
+  "description": "SAM AI Agent Registry - AI agents that power SAM AI interactions",
+  "documentation": "https://sme.ec/documentation",
+  "agents": [
+    {
+      "id": "sales-agent",
+      "name": "Sales Agent",
+      "description": "VSL landing page companion - answers prospect questions, handles objections, and guides toward purchase",
+      "icon": "💰",
+      "status": "active",
+      "path": "sales-agent/",
+      "use_cases": ["landing_pages", "chat_bubbles", "forms", "vsl_pages"],
+      "triggers": ["pricing", "how much", "what does it cost", "how it works", "is this for me", "demo", "trial", "get started"]
+    },
+    {
+      "id": "support-agent",
+      "name": "Support Agent",
+      "description": "Client support and troubleshooting assistant",
+      "icon": "🛟",
+      "status": "planned",
+      "path": "support-agent/",
+      "use_cases": ["help_desk", "chat_bubbles", "in_app"],
+      "triggers": ["help", "problem", "not working", "error", "how do I"]
+    },
+    {
+      "id": "onboarding-agent",
+      "name": "Onboarding Agent",
+      "description": "New client setup and feature discovery guide",
+      "icon": "🚀",
+      "status": "planned",
+      "path": "onboarding-agent/",
+      "use_cases": ["new_client", "first_login", "feature_discovery"],
+      "triggers": ["getting started", "setup", "first time", "new here"]
+    }
+  ]
+}

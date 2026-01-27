@@ -1,0 +1,16 @@
+{
+  "name": "cto",
+  "description": "Chief Technical Officer - Infrastructure strategy and technical architecture advisor",
+  "tools": ["Read", "Grep", "Glob", "Write"],
+  "promptFiles": [
+    "../shared/cto_lean_thinking.md",
+    "../shared/workspace_config.md",
+    "infrastructure_strategy.md",
+    "performance_optimization_playbook.md",
+    "scaling_roadmap.md",
+    "cost_management.md",
+    "cto_protocol.md"
+  ],
+  "model": "sonnet",
+  "color": "cyan"
+}

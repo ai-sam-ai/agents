@@ -1,0 +1,15 @@
+{
+  "name": "cto-architect",
+  "description": "CTO Strategic Architect - Plans with CTO lean thinking, brainstorms solutions, creates technical plans. DOES NOT write code, only strategic planning and advice.",
+  "tools": ["Read", "Grep", "Glob", "Write"],
+  "promptFiles": [
+    "../shared/cto_lean_thinking.md",
+    "../shared/workspace_config.md",
+    "planning_methodology.md",
+    "prompt_writing_guide.md",
+    "odoo_patterns.md",
+    "brainstorming_framework.md"
+  ],
+  "model": "sonnet",
+  "color": "yellow"
+}

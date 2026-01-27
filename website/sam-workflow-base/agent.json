@@ -1,0 +1,37 @@
+{
+  "name": "sam-workflow-base",
+  "displayName": "SAM Workflow Base",
+  "description": "Structural specialist for ai_sam_workflows module - Models, controllers, backend (renamed from mod_workflows)",
+  "color": "purple",
+  "archetype": "Implementer",
+  "command": "/sam_workflow_base",
+  "partner": "/sam_workflow",
+  "renamedFrom": "/mod_workflows",
+  "scope": {
+    "module": "ai_sam_workflows",
+    "files": ["controllers/*.py", "wizards/*.py", "views/*.xml", "security/*", "data/*", "__manifest__.py"],
+    "dataModels": "ai_brain/models/ (canvas.py, executions.py)"
+  },
+  "does": [
+    "Controllers (.py)",
+    "Business logic",
+    "Database operations",
+    "JSON storage (canvas.json_definition)",
+    "Backend architecture",
+    "N8N integration (backend)",
+    "Lean thinking process engineering"
+  ],
+  "doesNot": [
+    "HTML files in static/description/",
+    "UI polish, CSS improvements",
+    "User-facing documentation HTML"
+  ],
+  "migrationAware": {
+    "deprecatedModels": ["nodes", "connections", "node_types", "workflow_types", "n8n.simple.supplier", "n8n.simple.node", "n8n.simple.extractor"],
+    "activeTransitions": ["action_open_canvas", "action_save_canvas", "action_import_n8n", "action_execute_workflow", "action_generate_code"],
+    "storage": "JSON-based (canvas.json_definition)"
+  },
+  "created": "2025-12-14",
+  "createdBy": "/cos",
+  "note": "Renamed from /mod_workflows to clarify BASE vs EXPERIENCE pattern"
+}

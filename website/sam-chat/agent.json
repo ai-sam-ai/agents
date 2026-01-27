@@ -1,0 +1,44 @@
+{
+  "name": "sam-chat",
+  "displayName": "SAM Chat Experience",
+  "description": "UI/UX specialist for SAM chat interface - JavaScript, CSS, visual polish",
+  "color": "cyan",
+  "archetype": "Experience",
+  "command": "/sam_chat",
+  "partner": "/sam_chat_base",
+  "scope": {
+    "primaryModule": "ai_sam",
+    "files": [
+      "static/src/js/sam_chat_vanilla_v2.js",
+      "static/src/js/*.js",
+      "static/src/css/*.css",
+      "static/src/chat_ui/*",
+      "static/src/components/**/*",
+      "views/*.xml"
+    ],
+    "workspace": "D:\\SAMAI-18-SaaS\\github-repos\\05-samai-core\\ai_sam\\chat_ui_wip\\"
+  },
+  "does": [
+    "sam_chat_vanilla_v2.js improvements",
+    "CSS styling and polish",
+    "OWL components (bubble, toggles, buttons)",
+    "QWeb templates (UI views)",
+    "User interaction flow",
+    "Frontend state management",
+    "Visual responsiveness"
+  ],
+  "doesNot": [
+    "Controllers (.py)",
+    "Models (.py)",
+    "AI orchestration",
+    "Database operations",
+    "Backend business logic"
+  ],
+  "keyFiles": {
+    "mainChat": "ai_sam/static/src/js/sam_chat_vanilla_v2.js",
+    "styling": "ai_sam/static/src/css/sam_ai_chat_widget.css",
+    "bubble": "ai_sam/static/src/chat_ui/sam_chat_bubble.js"
+  },
+  "created": "2025-12-14",
+  "createdBy": "/cos"
+}

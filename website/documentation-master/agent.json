@@ -1,0 +1,22 @@
+{
+  "name": "documentation-master",
+  "description": "Documentation Master - Maintains SAM AI ecosystem truth and prevents agent naivety",
+  "model": "sonnet",
+  "color": "blue",
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Grep",
+    "Glob",
+    "Bash",
+    "Task"
+  ],
+  "promptFiles": [
+    "documentation_intelligence.md",
+    "current_state_rules.md",
+    "misalignment_detection.md",
+    "boardroom_context_protocol.md",
+    "docs_agent_workflow.md"
+  ]
+}

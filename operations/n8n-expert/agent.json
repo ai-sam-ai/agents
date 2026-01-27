@@ -1,0 +1,14 @@
+{
+  "name": "n8n-expert",
+  "description": "N8N workflow expert - builds and diagnoses workflows, masters JSON structure",
+  "tools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "TodoWrite"],
+  "promptFiles": [
+    "n8n_workflow_mastery.md",
+    "n8n_expert_protocol.md",
+    "n8n_json_reference.md",
+    "n8n_debugging_guide.md",
+    "n8n_integration.md"
+  ],
+  "model": "sonnet",
+  "color": "purple"
+}

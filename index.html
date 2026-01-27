@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAM AI Agents</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { color: #333; }
+    h2 { color: #555; margin-top: 2rem; }
+    pre { background: #f5f5f5; padding: 1rem; overflow-x: auto; border-radius: 4px; }
+    code { background: #f5f5f5; padding: 0.2rem 0.4rem; border-radius: 3px; }
+    a { color: #0066cc; }
+    .endpoint { background: #e8f4e8; padding: 0.5rem 1rem; border-radius: 4px; margin: 0.5rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; }
+    th { background: #f5f5f5; }
+    .badge { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 3px; font-size: 0.8rem; }
+    .active { background: #d4edda; color: #155724; }
+    .planned { background: #fff3cd; color: #856404; }
+  </style>
+</head>
+<body>
+  <h1>SAM AI Agent Definitions</h1>
+  <p>Agent configuration endpoint for the SAM AI ecosystem.</p>
+
+  <h2>Endpoints</h2>
+  <div class="endpoint"><strong>Registry:</strong> <a href="index.json">index.json</a></div>
+  <div class="endpoint"><strong>For AI:</strong> <a href="llms.txt">llms.txt</a></div>
+
+  <h2>Available Agents</h2>
+  <table>
+    <tr>
+      <th>Agent</th>
+      <th>Status</th>
+      <th>Config</th>
+    </tr>
+    <tr>
+      <td>💰 Sales Agent</td>
+      <td><span class="badge active">active</span></td>
+      <td><a href="sales-agent/agent.json">agent.json</a></td>
+    </tr>
+    <tr>
+      <td>🛟 Support Agent</td>
+      <td><span class="badge planned">planned</span></td>
+      <td><a href="support-agent/agent.json">agent.json</a></td>
+    </tr>
+    <tr>
+      <td>🚀 Onboarding Agent</td>
+      <td><span class="badge planned">planned</span></td>
+      <td><a href="onboarding-agent/agent.json">agent.json</a></td>
+    </tr>
+  </table>
+
+  <h2>Usage</h2>
+  <pre>// Fetch agent registry
+fetch('https://ai-sam-ai.github.io/agents/index.json')
+  .then(r => r.json())
+  .then(registry => {
+    const activeAgents = registry.agents.filter(a => a.status === 'active');
+    console.log(activeAgents);
+  });</pre>
+
+  <h2>For AI Assistants</h2>
+  <p>See <a href="llms.txt">llms.txt</a> for structured documentation on how to navigate and use this registry.</p>
+
+  <hr>
+  <p><small>Auto-synced from <a href="https://github.com/ai-sam-ai/30_samai_saas_host_management">samai_agents module</a></small></p>
+</body>
+</html>
