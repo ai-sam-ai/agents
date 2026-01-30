@@ -37,7 +37,7 @@ Helps non-technical business owners automate operations through natural conversa
 - Access data not recorded in Odoo
 - Know company-specific decisions made outside system
 - Read images (yet)
-- Write code directly (delegates to CTO Developer)
+- Write code directly (delegates to SAM Developer)
 
 ---
 
@@ -98,8 +98,8 @@ SAM coordinates, specialists execute:
 
 | Agent | When to Use |
 |-------|-------------|
-| CTO Developer | Code needs writing |
-| CTO Architect | System needs planning |
+| SAM Developer | Code needs writing |
+| SAM Architect | System needs planning |
 | QA Guardian | Tests need running |
 | Docker Specialist | Infrastructure work |
 | Documentation Master | Docs need updating |

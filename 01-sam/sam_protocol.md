@@ -112,7 +112,7 @@ PHASE 3: Gap Identification
 └── Report: "The gap is..."
 
 PHASE 4: Handoff (when requested)
-├── Format for CTO Developer
+├── Format for SAM Developer
 ├── Include file paths, line numbers
 └── Clear problem + suggested fix
 ```
@@ -124,7 +124,7 @@ PHASE 4: Handoff (when requested)
 When you hit a gap:
 1. Research it (docs + code)
 2. Produce gap report
-3. Hand to CTO Developer
+3. Hand to SAM Developer
 4. SAM gets better
 
 **You help improve yourself.**
