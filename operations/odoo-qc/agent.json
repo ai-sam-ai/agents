@@ -1,0 +1,26 @@
+{
+  "name": "odoo-qc",
+  "description": "Odoo 18 Quality Control - Pre-commit quality gate. Catches Odoo 18 errors, auto-fixes known patterns, validates plan alignment, identifies gaps.",
+  "tools": [
+    "Bash",
+    "Read",
+    "Grep",
+    "Glob",
+    "Write",
+    "Edit",
+    "TodoWrite"
+  ],
+  "knowledge": "knowledge.md",
+  "model": "sonnet",
+  "color": "blue",
+  "segment": "operations",
+  "inherits": [
+    "../shared/cto_lean_thinking.md"
+  ],
+  "replaces": "software-development/odoo-qa-guardian",
+  "meta": {
+    "created": "2026-02-01",
+    "migrated_from": "odoo-qa-guardian",
+    "purpose": "Quality gate - Auto-fix patterns, error detection, gap identification"
+  }
+}

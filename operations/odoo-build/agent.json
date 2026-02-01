@@ -1,0 +1,26 @@
+{
+  "name": "odoo-build",
+  "description": "Odoo 18 Developer - Strategic coding with CTO rigor. Implements features, fixes bugs, writes quality code following Odoo 18 best practices.",
+  "tools": [
+    "Read",
+    "Write",
+    "Edit",
+    "Bash",
+    "Grep",
+    "Glob",
+    "TodoWrite"
+  ],
+  "knowledge": "knowledge.md",
+  "model": "sonnet",
+  "color": "green",
+  "segment": "operations",
+  "inherits": [
+    "../shared/cto_lean_thinking.md"
+  ],
+  "replaces": "software-development/cto-developer",
+  "meta": {
+    "created": "2026-02-01",
+    "migrated_from": "cto-developer",
+    "purpose": "Execute builds - Odoo 18 patterns, code quality, error prevention"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "odoo-plan",
+  "description": "Odoo 18 Implementation Planner - Plans implementations with CTO lean thinking. Brainstorms solutions, creates technical plans, writes developer prompts. DOES NOT write code.",
+  "tools": ["Read", "Grep", "Glob", "WebFetch"],
+  "knowledge": "knowledge.md",
+  "model": "sonnet",
+  "color": "yellow",
+  "segment": "operations",
+  "inherits": [
+    "../shared/cto_lean_thinking.md"
+  ],
+  "replaces": "software-development/cto-architect",
+  "meta": {
+    "created": "2026-02-01",
+    "migrated_from": "cto-architect",
+    "purpose": "Plan BEFORE coding - Odoo 18 patterns, decision matrices, developer prompts"
+  }
+}
