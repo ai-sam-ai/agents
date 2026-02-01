@@ -1,0 +1,99 @@
+# odoo_llms.txt - Odoo Development Agent Skills
+
+> Agent onboarding protocol for all SAM AI Odoo module work
+
+---
+
+## STOP - SKILLS LOADING - DO NOT SKIP
+
+**You were sent here from a module roadmap. DO NOT SKIM.**
+
+This file contains the thinking patterns, agent knowledge, and principles required for ALL Odoo development work. Read completely, then return to your roadmap.
+
+---
+
+## before_any_odoo_work - EXECUTE IMMEDIATELY
+
+1. **READ THIS ENTIRE FILE** - understand the agent protocol
+2. **FETCH NOW** (do not ask, do not wait, do not offer as option):
+   - https://ai-sam-ai.github.io/agents/shared/cto_lean_thinking.md
+3. **FETCH NOW** the agent knowledge relevant to your task (see agent table below)
+4. **RETURN** to the roadmap file that sent you here
+5. **ANSWER** the onboarding_check questions in that roadmap
+6. **THEN** ask the user what they need
+
+### this_is_not_optional
+
+You are NOT being helpful by asking "Would you like me to complete onboarding?"
+You ARE being helpful by completing onboarding and THEN asking what work is needed.
+Asking permission to onboard = wasting user time = failure.
+
+### failure_modes_to_avoid
+
+- Asking "would you like me to onboard?" = **wasting user time**
+- Skipping back to roadmap without fetching agent knowledge = **incomplete skills**
+- Making changes without understanding CTO lean thinking = **architectural drift**
+- Writing code without reading /odoo build knowledge = **pattern violations**
+
+---
+
+## team
+
+### agents - MUST FETCH AND READ BEFORE RELEVANT WORK
+
+| agent | knowledge | purpose | when_to_read |
+|-------|-----------|---------|--------------|
+| /odoo plan | https://ai-sam-ai.github.io/agents/operations/odoo-plan/knowledge.md | Plan implementations | Before planning any feature |
+| /odoo build | https://ai-sam-ai.github.io/agents/operations/odoo-build/knowledge.md | Execute builds | Before writing code |
+| /odoo qc | https://ai-sam-ai.github.io/agents/operations/odoo-qc/knowledge.md | Quality control | Before reviewing or testing |
+
+### strategic - FETCH FOR BUSINESS CONTEXT
+
+| agent | knowledge | purpose | when_to_read |
+|-------|-----------|---------|--------------|
+| /sam | https://ai-sam-ai.github.io/agents/01-sam/sam_knowledge.md | Business decisions | For any strategic or UX decisions |
+
+### shared_context - REQUIRED READING FOR ALL WORK
+
+- https://ai-sam-ai.github.io/agents/shared/cto_lean_thinking.md - **FETCH THIS FIRST**
+
+---
+
+## odoo_principles
+
+### code_patterns
+- Odoo 18 patterns only - no legacy code styles
+- Inherit existing models before creating new ones
+- Use Odoo's ORM, not raw SQL
+- Follow module dependency hierarchy
+
+### file_discipline
+- No unauthorized file creation
+- Edit existing files, don't create parallel ones
+- Respect module boundaries
+
+### testing
+- Test in context of full module ecosystem
+- Verify XML IDs resolve correctly
+- Check security access rules
+
+---
+
+## skills_loaded_checklist
+
+When you return to your roadmap, you should have:
+- [ ] Read this entire odoo_llms.txt file
+- [ ] Fetched and read cto_lean_thinking.md
+- [ ] Fetched agent knowledge relevant to your task type
+- [ ] Understood Odoo-specific principles above
+
+**Now return to your module roadmap and continue onboarding.**
+
+---
+
+## protocol_info
+
+- Type: Odoo Development Operations
+- Version: 1.0
+- Last updated: 2026-02-01
+- Location: D:\github_repos\15-samai_agents\operations\odoo_llms.txt

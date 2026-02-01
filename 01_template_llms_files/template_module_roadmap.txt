@@ -1,0 +1,140 @@
+# {MODULE_NAME} - Module Roadmap
+
+> {ONE_LINE_MODULE_DESCRIPTION}
+
+---
+
+## STOP - LOAD SKILLS FIRST - DO NOT SKIP
+
+**Before reading this roadmap, you MUST load your operational skills.**
+
+### required_reading - EXECUTE NOW
+
+1. **READ NOW**: `D:\github_repos\15-samai_agents\operations\{OPERATION_TYPE}_llms.txt`
+   - This contains agent knowledge, thinking patterns, and operational principles
+   - DO NOT ask permission - JUST FETCH AND READ IT
+2. **COMPLETE** the skills_loaded_checklist in that file
+3. **RETURN HERE** and continue reading this roadmap
+4. **ANSWER** the module_onboarding_check at the end of this file
+5. **THEN** ask the user what they need
+
+### if_you_skipped_this
+
+You will make poor decisions. Go back and read {OPERATION_TYPE}_llms.txt now.
+
+---
+
+## purpose
+
+{DESCRIBE_WHAT_THIS_MODULE_DOES}
+- {CAPABILITY_1}
+- {CAPABILITY_2}
+- {CAPABILITY_3}
+
+## structure
+
+```
+models/
+  {file}.py           : {description}
+  {file}.py           : {description}
+
+controllers/
+  {file}.py           : {description}
+
+static/
+  {file}.js           : {description}
+
+views/
+  {file}.xml          : {description}
+```
+
+## patterns
+
+- {pattern_name}: {where_defined}, {where_executed}
+- {pattern_name}: {description}
+
+## dataflow
+
+```
+{ENTRY_POINT}
+  → {STEP_1} (file:line)
+  → {STEP_2} (file:line)
+  → {STEP_3} (file:line)
+  → {OUTPUT}
+```
+
+## key_methods
+
+| action | location |
+|--------|----------|
+| {action_description} | {file}:{line} or {file}:{method_name} |
+| {action_description} | {file}:{line} |
+
+## common_tasks
+
+### {task_name}
+1. {step_1}
+2. {step_2}
+3. {step_3}
+
+### {task_name}
+1. {step_1}
+2. {step_2}
+
+## models
+
+| model | purpose | key_fields |
+|-------|---------|------------|
+| {model.name} | {what_it_does} | {field_1}, {field_2} |
+
+## dependencies
+
+- {module}: {why_needed}
+- {module}: {why_needed}
+
+## refactoring_notes
+
+| file | lines | status |
+|------|-------|--------|
+| {file} | ~{count} | {status: reasonable / candidate for split / needs review} |
+
+## docs
+
+- {filename} : {description}
+
+## current_focus
+
+- Last updated: {DATE}
+- Recent additions: {what_was_added}
+- Known debt: {technical_debt}
+- Active work: {current_priorities}
+
+## keywords
+
+{comma, separated, keywords, for, search}
+
+---
+
+## module_onboarding_check
+
+**Confirm you can answer these about THIS module:**
+
+1. {QUESTION_ABOUT_KEY_FILE_LOCATION}
+2. {QUESTION_ABOUT_MAIN_ENTRY_POINT}
+3. {QUESTION_ABOUT_CORE_MODEL}
+4. {QUESTION_ABOUT_COMMON_TASK}
+5. {QUESTION_ABOUT_KNOWN_ISSUES}
+
+**Answers should come from this roadmap. If you cannot answer, re-read.**
+
+---
+
+## template_instructions
+
+**DELETE THIS SECTION AFTER FILLING IN THE TEMPLATE**
+
+1. Replace all {PLACEHOLDERS} with actual values
+2. {OPERATION_TYPE} = odoo, marketing, analytics, etc.
+3. Add/remove sections as needed for your module
+4. Ensure module_onboarding_check questions are answerable from YOUR content
+5. Delete this template_instructions section when done

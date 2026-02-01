@@ -1,0 +1,108 @@
+# {OPERATION_TYPE}_llms.txt - {OPERATION_TYPE} Agent Skills
+
+> Agent onboarding protocol for all SAM AI {OPERATION_TYPE} work
+
+---
+
+## STOP - SKILLS LOADING - DO NOT SKIP
+
+**You were sent here from a module roadmap. DO NOT SKIM.**
+
+This file contains the thinking patterns, agent knowledge, and principles required for ALL {OPERATION_TYPE} work. Read completely, then return to your roadmap.
+
+---
+
+## before_any_{OPERATION_TYPE}_work - EXECUTE IMMEDIATELY
+
+1. **READ THIS ENTIRE FILE** - understand the agent protocol
+2. **FETCH NOW** (do not ask, do not wait, do not offer as option):
+   - https://ai-sam-ai.github.io/agents/shared/cto_lean_thinking.md
+3. **FETCH NOW** the agent knowledge relevant to your task (see agent table below)
+4. **RETURN** to the roadmap file that sent you here
+5. **ANSWER** the onboarding_check questions in that roadmap
+6. **THEN** ask the user what they need
+
+### this_is_not_optional
+
+You are NOT being helpful by asking "Would you like me to complete onboarding?"
+You ARE being helpful by completing onboarding and THEN asking what work is needed.
+Asking permission to onboard = wasting user time = failure.
+
+### failure_modes_to_avoid
+
+- Asking "would you like me to onboard?" = **wasting user time**
+- Skipping back to roadmap without fetching agent knowledge = **incomplete skills**
+- Making changes without understanding CTO lean thinking = **architectural drift**
+- {ADD_OPERATION_SPECIFIC_FAILURE_MODE}
+
+---
+
+## team
+
+### agents - MUST FETCH AND READ BEFORE RELEVANT WORK
+
+| agent | knowledge | purpose | when_to_read |
+|-------|-----------|---------|--------------|
+| {/agent_name} | {knowledge_url} | {purpose} | {when_to_read} |
+| {/agent_name} | {knowledge_url} | {purpose} | {when_to_read} |
+
+### strategic - FETCH FOR BUSINESS CONTEXT
+
+| agent | knowledge | purpose | when_to_read |
+|-------|-----------|---------|--------------|
+| /sam | https://ai-sam-ai.github.io/agents/01-sam/sam_knowledge.md | Business decisions | For any strategic or UX decisions |
+
+### shared_context - REQUIRED READING FOR ALL WORK
+
+- https://ai-sam-ai.github.io/agents/shared/cto_lean_thinking.md - **FETCH THIS FIRST**
+- {ADD_OTHER_SHARED_CONTEXT_IF_NEEDED}
+
+---
+
+## {OPERATION_TYPE}_principles
+
+### {principle_category}
+- {principle_1}
+- {principle_2}
+- {principle_3}
+
+### {principle_category}
+- {principle_1}
+- {principle_2}
+
+### {principle_category}
+- {principle_1}
+- {principle_2}
+
+---
+
+## skills_loaded_checklist
+
+When you return to your roadmap, you should have:
+- [ ] Read this entire {OPERATION_TYPE}_llms.txt file
+- [ ] Fetched and read cto_lean_thinking.md
+- [ ] Fetched agent knowledge relevant to your task type
+- [ ] Understood {OPERATION_TYPE}-specific principles above
+
+**Now return to your module roadmap and continue onboarding.**
+
+---
+
+## protocol_info
+
+- Type: {OPERATION_TYPE} Operations
+- Version: 1.0
+- Last updated: {DATE}
+- Location: D:\github_repos\15-samai_agents\operations\{OPERATION_TYPE}_llms.txt
+
+---
+
+## template_instructions
+
+**DELETE THIS SECTION AFTER FILLING IN THE TEMPLATE**
+
+1. Replace all {PLACEHOLDERS} with actual values
+2. {OPERATION_TYPE} = odoo, marketing, analytics, sales, etc.
+3. Add relevant agents to the team table
+4. Define principles specific to this operation type
+5. Delete this template_instructions section when done

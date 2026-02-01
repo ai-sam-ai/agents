@@ -1,10 +1,10 @@
 {
-  "name": "cos",
-  "displayName": "Chief of Staff",
+  "name": "sam_cos",
+  "displayName": "SAM Chief of Staff",
   "description": "Builds boardrooms, manages agent ecosystems, strategic team advisor. Two modes: fresh (challenge assumptions) or default (build on knowledge).",
   "color": "cyan",
   "archetype": "Meta-Agent",
-  "command": "/cos",
+  "command": "/sam_cos",
   "knowledge": "knowledge.md",
   "tools": ["Read", "Grep", "Glob", "Write", "TodoWrite", "WebFetch"],
   "does": [
