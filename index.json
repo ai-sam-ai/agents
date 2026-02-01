@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "updated": "2026-01-30",
+  "updated": "2026-02-01",
   "base_url": "https://ai-sam-ai.github.io/agents",
   "description": "SAM AI Agent Registry - Auto-generated from folder structure",
   "segments": [
@@ -200,6 +200,42 @@
       "status": "active",
       "customer_facing": false,
       "path": "operations/n8n-expert/",
+      "use_cases": [],
+      "triggers": []
+    },
+    {
+      "id": "odoo-build",
+      "name": "odoo-build",
+      "description": "Odoo 18 Developer - Strategic coding with CTO rigor. Implements features, fixes bugs, writes quality code following Odoo 18 best practices.",
+      "segment": "operations",
+      "icon": "🤖",
+      "status": "active",
+      "customer_facing": false,
+      "path": "operations/odoo-build/",
+      "use_cases": [],
+      "triggers": []
+    },
+    {
+      "id": "odoo-plan",
+      "name": "odoo-plan",
+      "description": "Odoo 18 Implementation Planner - Plans implementations with CTO lean thinking. Brainstorms solutions, creates technical plans, writes developer prompts. DOES NOT write code.",
+      "segment": "operations",
+      "icon": "🤖",
+      "status": "active",
+      "customer_facing": false,
+      "path": "operations/odoo-plan/",
+      "use_cases": [],
+      "triggers": []
+    },
+    {
+      "id": "odoo-qc",
+      "name": "odoo-qc",
+      "description": "Odoo 18 Quality Control - Pre-commit quality gate. Catches Odoo 18 errors, auto-fixes known patterns, validates plan alignment, identifies gaps.",
+      "segment": "operations",
+      "icon": "🤖",
+      "status": "active",
+      "customer_facing": false,
+      "path": "operations/odoo-qc/",
       "use_cases": [],
       "triggers": []
     },
