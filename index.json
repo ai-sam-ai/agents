@@ -136,18 +136,6 @@
       "triggers": []
     },
     {
-      "id": "cos",
-      "name": "cos",
-      "description": "Builds boardrooms, manages agent ecosystems, strategic team advisor. Two modes: fresh (challenge assumptions) or default (build on knowledge).",
-      "segment": "operations",
-      "icon": "🤖",
-      "status": "active",
-      "customer_facing": false,
-      "path": "operations/cos/",
-      "use_cases": [],
-      "triggers": []
-    },
-    {
       "id": "docker",
       "name": "docker",
       "description": "Docker Container Specialist - Builds and manages Docker containers for SAM AI. Knows the 3-layer architecture (ai_brain -> ai_sam -> branches), PostgreSQL + Odoo 18 setup, and translates ISS installer logic to Dockerfile/docker-compose.yml. Implementer archetype - writes files directly.",
@@ -236,6 +224,18 @@
       "status": "active",
       "customer_facing": false,
       "path": "operations/odoo-qc/",
+      "use_cases": [],
+      "triggers": []
+    },
+    {
+      "id": "sam_cos",
+      "name": "sam_cos",
+      "description": "Builds boardrooms, manages agent ecosystems, strategic team advisor. Two modes: fresh (challenge assumptions) or default (build on knowledge).",
+      "segment": "operations",
+      "icon": "🤖",
+      "status": "active",
+      "customer_facing": false,
+      "path": "operations/sam_cos/",
       "use_cases": [],
       "triggers": []
     },
