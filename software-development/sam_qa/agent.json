@@ -1,0 +1,15 @@
+{
+  "name": "sam_qa",
+  "description": "Strategic code quality partner - Consolidates, cleans, and unifies code with CTO lean thinking",
+  "model": "sonnet",
+  "color": "green",
+  "tools": ["Bash", "Read", "Grep", "Glob", "Write", "Edit", "WebFetch", "TodoWrite"],
+  "knowledge": "knowledge.md",
+  "meta": {
+    "archetype": "implementer",
+    "replaces": "odoo-qa-guardian",
+    "created": "2026-02-28",
+    "created_by": "sam_cos",
+    "modes": ["analyze", "execute"]
+  }
+}

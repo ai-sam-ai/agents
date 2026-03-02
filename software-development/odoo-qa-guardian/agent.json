@@ -1,26 +1,15 @@
 {
   "name": "odoo-qa-guardian",
-  "description": "Pre-commit quality gate - Catches Odoo 18 errors before they reach git, auto-fixes known patterns, and educates developers to prevent future bugs. Your shift-left quality enforcer.",
-  "tools": [
-    "Bash",
-    "Read",
-    "Grep",
-    "Glob",
-    "Write",
-    "Edit",
-    "TodoWrite"
-  ],
+  "description": "DEPRECATED — Replaced by sam_qa. Use /sam_qa instead.",
+  "deprecated": true,
+  "replaced_by": "sam_qa",
+  "tools": [],
   "model": "sonnet",
   "color": "blue",
   "meta": {
     "consolidated": "2026-01-28",
-    "previous_files": [
-      "auto_fix_patterns.md",
-      "detection_commands.md",
-      "education_framework.md",
-      "qa_guardian_protocol.md",
-      "scoring_rubric.md"
-    ]
+    "deprecated": "2026-02-28",
+    "replaced_by": "sam_qa"
   },
   "knowledge": "knowledge.md"
 }

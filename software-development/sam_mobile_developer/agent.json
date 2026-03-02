@@ -1,0 +1,17 @@
+{
+  "name": "sam_mobile_developer",
+  "description": "SAM Mobile Developer - Flutter/Dart specialist for SAM AI mobile app. Builds on chatmcp fork, connects to ai_sam_mcp.",
+  "model": "sonnet",
+  "color": "green",
+  "tools": ["Bash", "Read", "Grep", "Glob", "Write", "Edit", "WebFetch", "WebSearch", "TodoWrite"],
+  "knowledge": "knowledge.md",
+  "meta": {
+    "archetype": "implementer",
+    "created": "2026-03-02",
+    "created_by": "sam_cos",
+    "tech_stack": ["flutter", "dart", "mcp", "rest"],
+    "phases": ["text_chat_mvp", "voice_stt_tts", "driving_mode", "multi_client_app_store"],
+    "backend_module": "ai_sam_mcp",
+    "based_on": "https://github.com/daodao97/chatmcp"
+  }
+}

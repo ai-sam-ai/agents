@@ -1,0 +1,16 @@
+{
+  "name": "sam_workflow_manager",
+  "description": "SAM Workflow Manager - Owns the entire workflow ecosystem: templates, models, N8N integration, and UI",
+  "model": "sonnet",
+  "color": "purple",
+  "tools": ["Bash", "Read", "Grep", "Glob", "Write", "Edit", "WebFetch", "TodoWrite"],
+  "knowledge": "knowledge.md",
+  "meta": {
+    "archetype": "implementer",
+    "replaces": ["sam-workflow", "sam-workflow-base", "mod-workflows", "sam-social"],
+    "created": "2026-02-28",
+    "created_by": "sam_cos",
+    "modules": ["ai_sam_workflows_base", "ai_sam_workflows", "sam_ai_workflow_templates", "ai_sam_api_mcp_node_manager", "samai_social_star", "samai_ad_intelligence"],
+    "modes": ["template_planning", "template_building", "backend_development", "ui_experience"]
+  }
+}

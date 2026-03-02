@@ -1,7 +1,9 @@
 {
   "name": "mod-workflows",
   "displayName": "Workflows Module + N8N Specialist",
-  "description": "ai_sam_workflows module specialist + N8N workflow automation expert. Handles JSON storage, N8N integration, migration-aware development.",
+  "status": "RETIRED",
+  "retired_note": "Merged into /sam_workflow_manager (2026-02-28). Use /sam_workflow_manager instead.",
+  "description": "RETIRED - ai_sam_workflows module specialist + N8N workflow automation expert. Handles JSON storage, N8N integration, migration-aware development.",
   "color": "purple",
   "archetype": "Implementer",
   "command": "/mod_workflows",
