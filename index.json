@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "updated": "2026-02-01",
+  "updated": "2026-03-02",
   "base_url": "https://ai-sam-ai.github.io/agents",
   "description": "SAM AI Agent Registry - Auto-generated from folder structure",
   "segments": [
@@ -515,10 +515,10 @@
     {
       "id": "mod-workflows",
       "name": "mod-workflows",
-      "description": "ai_sam_workflows module specialist + N8N workflow automation expert. Handles JSON storage, N8N integration, migration-aware development.",
+      "description": "RETIRED - ai_sam_workflows module specialist + N8N workflow automation expert. Handles JSON storage, N8N integration, migration-aware development.",
       "segment": "software-development",
       "icon": "🤖",
-      "status": "active",
+      "status": "RETIRED",
       "customer_facing": false,
       "path": "software-development/mod-workflows/",
       "use_cases": [],
@@ -539,7 +539,7 @@
     {
       "id": "odoo-qa-guardian",
       "name": "odoo-qa-guardian",
-      "description": "Pre-commit quality gate - Catches Odoo 18 errors before they reach git, auto-fixes known patterns, and educates developers to prevent future bugs. Your shift-left quality enforcer.",
+      "description": "DEPRECATED — Replaced by sam_qa. Use /sam_qa instead.",
       "segment": "software-development",
       "icon": "🤖",
       "status": "active",
@@ -557,6 +557,42 @@
       "status": "active",
       "customer_facing": false,
       "path": "software-development/qa-test/",
+      "use_cases": [],
+      "triggers": []
+    },
+    {
+      "id": "sam-workflow-manager",
+      "name": "sam_workflow_manager",
+      "description": "SAM Workflow Manager - Owns the entire workflow ecosystem: templates, models, N8N integration, and UI",
+      "segment": "software-development",
+      "icon": "🤖",
+      "status": "active",
+      "customer_facing": false,
+      "path": "software-development/sam-workflow-manager/",
+      "use_cases": [],
+      "triggers": []
+    },
+    {
+      "id": "sam_mobile_developer",
+      "name": "sam_mobile_developer",
+      "description": "SAM Mobile Developer - Flutter/Dart specialist for SAM AI mobile app. Builds on chatmcp fork, connects to ai_sam_mcp.",
+      "segment": "software-development",
+      "icon": "🤖",
+      "status": "active",
+      "customer_facing": false,
+      "path": "software-development/sam_mobile_developer/",
+      "use_cases": [],
+      "triggers": []
+    },
+    {
+      "id": "sam_qa",
+      "name": "sam_qa",
+      "description": "Strategic code quality partner - Consolidates, cleans, and unifies code with CTO lean thinking",
+      "segment": "software-development",
+      "icon": "🤖",
+      "status": "active",
+      "customer_facing": false,
+      "path": "software-development/sam_qa/",
       "use_cases": [],
       "triggers": []
     },
