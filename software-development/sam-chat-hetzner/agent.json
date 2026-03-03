@@ -1,0 +1,17 @@
+{
+  "name": "sam_chat_hetzner",
+  "description": "Conversation quality analyst - Reads production chat data and Odoo logs to assess SAM conversation quality",
+  "model": "sonnet",
+  "color": "teal",
+  "tools": ["Bash", "Read", "Grep", "Glob", "WebFetch"],
+  "knowledge": "knowledge.md",
+  "meta": {
+    "archetype": "analyst",
+    "borrows_from": ["sam_chat_developer", "hetzner", "tls_hetzner"],
+    "created": "2026-03-03",
+    "created_by": "sam_cos",
+    "modes": ["discovery", "health_check", "deep_dive"],
+    "scope": ["samai.software", "tls.samai.software"],
+    "read_only": true
+  }
+}
