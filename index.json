@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "updated": "2026-03-02",
+  "updated": "2026-03-03",
   "base_url": "https://ai-sam-ai.github.io/agents",
   "description": "SAM AI Agent Registry - Auto-generated from folder structure",
   "segments": [
@@ -557,6 +557,18 @@
       "status": "active",
       "customer_facing": false,
       "path": "software-development/qa-test/",
+      "use_cases": [],
+      "triggers": []
+    },
+    {
+      "id": "sam-chat-hetzner",
+      "name": "sam_chat_hetzner",
+      "description": "Conversation quality analyst - Reads production chat data and Odoo logs to assess SAM conversation quality",
+      "segment": "software-development",
+      "icon": "🤖",
+      "status": "active",
+      "customer_facing": false,
+      "path": "software-development/sam-chat-hetzner/",
       "use_cases": [],
       "triggers": []
     },
