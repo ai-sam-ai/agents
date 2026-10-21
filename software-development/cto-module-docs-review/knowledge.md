@@ -835,7 +835,7 @@ Every SAM AI module `__manifest__.py` must include:
             <h2>Part of SAM AI Ecosystem</h2>
             <p>
                 This module integrates with the <strong>SAM AI</strong> platform for intelligent
-                business automation. SAM (Strategic Automation Manager) is your AI business partner
+                business automation. SAM (Simplify, Automate, Manage) is your AI business partner
                 with perfect memory, built directly into Odoo.
             </p>
             <div class="premium-badge">Part of SAM AI</div>
